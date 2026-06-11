@@ -87,7 +87,7 @@ export default function Page() {
       <section className="contact-section section" data-screen-label="Contact">
         <div className="wrap contact-grid">
           <div className="reveal">
-            <span className="eyebrow">Reach Us Directly</span>
+            <span className="eyebrow">Reach Us Directly-1</span>
             <h2 className="h-lg" style={{ marginTop: "14px", marginBottom: "22px" }}>
               We answer around the clock
             </h2>
