@@ -1,0 +1,11 @@
+{
+  "/icon0.svg/route": "app/icon0.svg/route.js",
+  "/manifest.json/route": "app/manifest.json/route.js",
+  "/page": "app/page.js",
+  "/roadside-assistance/jump-starts/page": "app/roadside-assistance/jump-starts/page.js",
+  "/towing-services/page": "app/towing-services/page.js",
+  "/roadside-assistance/page": "app/roadside-assistance/page.js",
+  "/roadside-assistance/tire-changes/page": "app/roadside-assistance/tire-changes/page.js",
+  "/roadside-assistance/fuel-delivery/page": "app/roadside-assistance/fuel-delivery/page.js",
+  "/roadside-assistance/lockout-services/page": "app/roadside-assistance/lockout-services/page.js"
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "uuid": "34837e90-cb6a-47f6-b132-6fb4c5b56874",
+    "mime": "image/jpeg",
+    "compressed": false,
+    "dataLen": 98044
+  },
+  {
+    "uuid": "0ed6354c-74e4-47be-86a9-d64b6f500d57",
+    "mime": "image/jpeg",
+    "compressed": false,
+    "dataLen": 170984
+  },
+  {
+    "uuid": "cd04af3a-b029-4750-af38-16262408290e",
+    "mime": "image/jpeg",
+    "compressed": false,
+    "dataLen": 210484
+  },
+  {
+    "uuid": "722b0190-474c-460b-bbb3-0b1dd640dff6",
+    "mime": "image/png",
+    "compressed": false,
+    "dataLen": 201544
+  },
+  {
+    "uuid": "c200035d-6758-4472-bf4a-54fc8dc84b6e",
+    "mime": "image/jpeg",
+    "compressed": false,
+    "dataLen": 237232
+  },
+  {
+    "uuid": "f61ddda0-8f45-4b5e-bd64-b1bbce098b3a",
+    "mime": "image/jpeg",
+    "compressed": false,
+    "dataLen": 227772
+  },
+  {
+    "uuid": "d8dd9708-7307-44f7-844e-fc9c7d6a6761",
+    "mime": "image/png",
+    "compressed": false,
+    "dataLen": 308464
+  },
+  {
+    "uuid": "745d14c6-178d-4da9-aea6-4c75b8760233",
+    "mime": "image/jpeg",
+    "compressed": false,
+    "dataLen": 151612
+  },
+  {
+    "uuid": "66bfe733-b6ee-46f1-aaef-488eebe7eae5",
+    "mime": "image/jpeg",
+    "compressed": false,
+    "dataLen": 275308
+  },
+  {
+    "uuid": "439a1ee6-e0e4-4c4f-93a4-650a05186f0e",
+    "mime": "application/javascript",
+    "compressed": true,
+    "dataLen": 1652
+  },
+  {
+    "uuid": "d3504f96-887d-4fed-8188-011928e5e899",
+    "mime": "font/woff2",
+    "compressed": false,
+    "dataLen": 45952
+  },
+  {
+    "uuid": "24ba37c7-a366-4589-b776-041eaecbb07e",
+    "mime": "font/woff2",
+    "compressed": false,
+    "dataLen": 114988
+  },
+  {
+    "uuid": "622f991a-3582-438a-85cc-31c5ac5b510a",
+    "mime": "font/woff2",
+    "compressed": false,
+    "dataLen": 120140
+  }
+]
