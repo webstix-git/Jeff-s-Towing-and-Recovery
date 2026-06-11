@@ -142,7 +142,7 @@ export default function Page() {
           </div>
 
           <div className="reveal d1">
-            <span className="eyebrow">Send A Request</span>
+            <span className="eyebrow">Send A Requests</span>
             <h2 className="h-lg" style={{ marginTop: "14px", marginBottom: "22px" }}>
               Tell us what you need
             </h2>
