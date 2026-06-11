@@ -17,7 +17,7 @@ export default function HomeContent() {
             <Link className="btn btn--ghost btn--lg" href="/towing-services">Explore Services</Link>
           </div>
         </div>
-        <span className="hero-scrollcue">Scroll</span>
+        
       </section>
       
       
