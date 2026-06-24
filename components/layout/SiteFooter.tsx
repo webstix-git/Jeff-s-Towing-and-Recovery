@@ -69,6 +69,7 @@ export default function SiteFooter() {
               width="116"
               height="88"
             />
+            <p className="footer-tagline">{site.tagline}</p>
             <FooterSocial />
           </div>
 
@@ -83,71 +84,70 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          <div className="footer-col footer-contact">
-            <h4>Location &amp; Contact</h4>
+          <div className="footer-col footer-col--info">
+            <div className="footer-info-inner">
 
-            <div className="footer-contact-section">
-              <div className="footer-locations-grid">
-                {site.locations.map((loc) => (
-                  <div className="footer-location-block" key={loc.id}>
-                    <a
-                      className="footer-location-link"
-                      href={loc.mapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Open ${loc.name} location in Google Maps`}
-                    >
-                      <p className="footer-location-name">{loc.name}</p>
-                      <div className="footer-contact-row footer-loc">
-                        <span className="footer-contact-icon" aria-hidden="true">
-                          <PinIcon />
-                        </span>
-                        <span className="footer-contact-text">
+              <div className="footer-info-contact">
+                <h4>Location &amp; Contact</h4>
+                <div className="footer-locations-grid">
+                  {site.locations.map((loc) => (
+                    <div className="footer-location-block" key={loc.id}>
+                      <a
+                        className="footer-loc-info-link"
+                        href={loc.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${loc.name} location in Google Maps`}
+                      >
+                        <div className="footer-loc-card-header">
+                          <p className="footer-location-name">{loc.name}</p>
+                          <span className="footer-loc-maps-icon" aria-hidden="true">
+                            <PinIcon />
+                          </span>
+                        </div>
+                        <p className="footer-loc-address">
                           {loc.street}
                           <br />
                           {loc.city}, {loc.state} {loc.zip}
-                        </span>
-                      </div>
-                    </a>
-                    <a className="footer-location-phone" href={`tel:${loc.phone.tel}`}>
-                      {loc.phone.display}
-                    </a>
-                  </div>
-                ))}
-              </div>
-
-              <div className="footer-email-block">
-                <p className="footer-location-name">Contact Email</p>
-                <div className="footer-contact-row footer-email">
-                  <span className="footer-contact-icon" aria-hidden="true">
-                    <MailIcon />
-                  </span>
-                  <a className="footer-contact-text" href={`mailto:${site.email}`}>
-                    {site.email}
+                        </p>
+                      </a>
+                      <a className="footer-location-phone" href={`tel:${loc.phone.tel}`}>
+                        {loc.phone.display}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <div className="footer-email-block">
+                  <a className="footer-email-link" href={`mailto:${site.email}`}>
+                    <span className="footer-contact-icon" aria-hidden="true">
+                      <MailIcon />
+                    </span>
+                    <span className="footer-contact-text">{site.email}</span>
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div className="footer-col footer-col--hours">
-            <h4>Hours of Operation</h4>
-            <div className="footer-hours-content">
-              {site.hours.office.map((line) => (
-                <p className="footer-hours-item" key={line}>
-                  {line}
-                </p>
-              ))}
-              <div className="footer-hours-emergency">
-                <span className="footer-contact-icon" aria-hidden="true">
-                  <ClockIcon />
-                </span>
-                <span className="footer-hours-emergency-text">
-                  {site.hours.emergencyLines.map((line) => (
-                    <span className="footer-emergency-line" key={line}>{line}</span>
+              <div className="footer-info-hours">
+                <h4>Hours of Operation</h4>
+                <div className="footer-hours-content">
+                  {site.hours.office.map((line) => (
+                    <p className="footer-hours-item" key={line}>
+                      {line}
+                    </p>
                   ))}
-                </span>
+                  <div className="footer-hours-emergency">
+                    <span className="footer-contact-icon" aria-hidden="true">
+                      <ClockIcon />
+                    </span>
+                    <span className="footer-hours-emergency-text">
+                      {site.hours.emergencyLines.map((line) => (
+                        <span className="footer-emergency-line" key={line}>{line}</span>
+                      ))}
+                    </span>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>

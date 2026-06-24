@@ -1127,7 +1127,7 @@ h1, h2, h3, h4 {
   );
   pointer-events: none;
 }
-.svc-tile .idx { font-family: var(--font-eyebrow); font-weight: 700; letter-spacing: .12em; font-size: 12px; color: var(--orange-400); text-shadow: 0 1px 8px rgba(8, 13, 22, 0.85); }
+.svc-tile .idx { font-family: var(--font-eyebrow); font-weight: 700; letter-spacing: .14em; font-size: 13px; color: var(--orange-400); text-shadow: 0 1px 8px rgba(8, 13, 22, 0.85); }
 .svc-tile h3 { font-size: clamp(24px, 2.4vw, 34px); margin: 10px 0 8px; color: #fff; text-shadow: 0 2px 16px rgba(8, 13, 22, 0.9); }
 .svc-tile p { font-size: 15.5px; color: rgba(255,255,255,.92); max-width: 42ch; line-height: 1.5; text-shadow: 0 1px 10px rgba(8, 13, 22, 0.85); }
 .svc-tile .go {
@@ -1153,7 +1153,15 @@ h1, h2, h3, h4 {
 .sm-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
 .sm-item .sm-ico { width: 30px; height: 30px; color: var(--navy-700); }
 .sm-item:hover .sm-ico { color: var(--orange-600); }
-.sm-item .sm-idx { font-family: var(--font-eyebrow); font-weight: 700; font-size: 12px; color: var(--steel-400); letter-spacing: .1em; }
+.sm-item .sm-idx {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 125%;
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1;
+  color: var(--orange-500);
+  letter-spacing: -0.02em;
+}
 .sm-item h4 { font-size: 22px; color: var(--navy-900); margin-bottom: 6px; }
 .sm-item p { font-size: 14.5px; color: var(--steel-500); line-height: 1.45; }
 
@@ -1177,7 +1185,7 @@ h1, h2, h3, h4 {
 .legacy-copy .lead + .lead { margin-top: 16px; }
 .values { display: flex; gap: 0; margin-top: 34px; border-top: 1px solid rgba(255,255,255,.14); }
 .value { flex: 1 1; padding-top: 22px; padding-right: 20px; }
-.value .v-num { font-family: var(--font-eyebrow); font-weight: 700; font-size: 12px; color: var(--orange-400); letter-spacing: .14em; }
+.value .v-num { font-family: var(--font-eyebrow); font-weight: 700; font-size: 15px; color: var(--orange-400); letter-spacing: .14em; }
 .value .v-lbl { font-family: var(--font-display); font-weight: 800; font-size: clamp(22px, 2vw, 28px); text-transform: uppercase; color: #fff; margin: 8px 0 6px; letter-spacing: -.01em; }
 .value p { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.45; }
 .memorial { margin-top: 30px; padding: 20px 24px; background: rgba(255,255,255,.04); border-left: 3px solid var(--amber); border-radius: 0 var(--r-md) var(--r-md) 0; font-style: italic; color: rgba(255,255,255,.78); font-size: 16px; }
@@ -1878,6 +1886,69 @@ textarea:focus-visible {
   line-height: 1.2;
 }
 
+/* ================================================================
+   FOOTER — Premium Redesign
+   ================================================================ */
+
+/* Top accent + breathing room */
+.site-footer {
+  border-top: 3px solid var(--orange-500);
+  padding-top: 72px;
+}
+
+/* 3-column layout: brand | services | combined info (wider) */
+.footer-grid {
+  grid-template-columns: 1.1fr 0.85fr 2fr;
+  grid-template-areas: none;
+  gap: clamp(28px, 3vw, 48px);
+  padding-bottom: clamp(40px, 5vw, 64px);
+}
+
+/* Combined info column — 2-column internal layout */
+.footer-col--info {
+  min-width: 0;
+}
+
+.footer-info-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-gap: 0;
+  gap: 0;
+  align-items: start;
+  height: 100%;
+}
+
+.footer-info-contact {
+  display: flex;
+  flex-direction: column;
+  padding-right: clamp(24px, 3vw, 44px);
+}
+
+.footer-info-hours {
+  display: flex;
+  flex-direction: column;
+  padding-left: clamp(24px, 3vw, 44px);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Section headings — orange pip underline */
+.site-footer h4 {
+  position: relative;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+}
+
+.site-footer h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 26px;
+  height: 2px;
+  background: var(--orange-500);
+  border-radius: 2px;
+}
+
 /* ---------- Footer: logo responsive sizing ---------- */
 @media (max-width: 1024px) {
   .footer-logo {
@@ -1886,14 +1957,7 @@ textarea:focus-visible {
   }
 }
 
-@media (max-width: 640px) {
-  .footer-logo {
-    height: 130px;
-    width: auto;
-  }
-}
-
-/* ---------- Footer: grid columns ---------- */
+/* ---------- Brand column ---------- */
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -1902,48 +1966,89 @@ textarea:focus-visible {
 
 .footer-col--brand {
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
+}
+
+/* Company tagline */
+.footer-tagline {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.50);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin: -4px 0 4px;
+  max-width: 22ch;
 }
 
 .footer-col--brand .footer-social {
   justify-content: flex-start;
-  margin-top: 4px;
+  margin-top: 6px;
+  gap: 10px;
 }
 
-.footer-location-link {
-  display: block;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.78);
-  transition: color 0.15s ease;
-}
+/* ================================================================
+   FOOTER — Location & Contact — Open Layout (no card constraints)
+   ================================================================ */
 
-.footer-location-link:hover {
-  color: var(--orange-400);
-}
-
-.footer-location-link:hover .footer-contact-text,
-.footer-location-link:hover .footer-location-name {
-  color: var(--orange-400);
-}
-
-.footer-location-link .footer-location-name {
-  transition: color 0.15s ease;
-}
-
-.footer-location-link .footer-contact-text {
-  transition: color 0.15s ease;
-}
-
+/* Locations stacked vertically — each gets full column width */
 .footer-locations-grid {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 0;
 }
 
+/* Open block — no card container, full breathing room */
 .footer-location-block {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  padding: 0 0 20px;
+  transition: none;
+}
+
+.footer-location-block + .footer-location-block {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-location-block:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+/* Clickable wrapper: name + address → Google Maps */
+.footer-loc-info-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.15s ease;
+}
+
+.footer-loc-info-link:hover .footer-location-name {
+  color: var(--orange-500);
+}
+
+.footer-loc-info-link:hover .footer-loc-address {
+  color: rgba(255, 255, 255, 0.80);
+}
+
+.footer-loc-info-link:hover .footer-loc-maps-icon {
+  background: var(--orange-500);
+  border-color: var(--orange-500);
+  color: #fff;
+}
+
+/* Header row: city label + maps icon */
+.footer-loc-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 8px;
 }
 
 .footer-location-name {
@@ -1954,72 +2059,129 @@ textarea:focus-visible {
   text-transform: uppercase;
   color: var(--orange-400);
   margin: 0;
-  line-height: 1.35;
+  line-height: 1.3;
+  transition: color 0.15s ease;
 }
 
-.footer-location-block .footer-location-name {
-  margin-top: 2px;
+/* Maps icon — visual indicator (not a link; wrapper is the link) */
+.footer-loc-maps-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: rgba(236, 91, 19, 0.1);
+  border: 1px solid rgba(236, 91, 19, 0.22);
+  color: var(--orange-400);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
-.footer-location-block .footer-contact-row {
-  margin-top: 2px;
+.footer-loc-maps-icon svg {
+  width: 14px;
+  height: 14px;
 }
 
+/* Address — full-width, clear, readable */
+.footer-loc-address {
+  padding: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.60);
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+
+/* Phone — large, prominent, immediately scannable */
 .footer-location-phone {
   display: block;
+  margin-top: 0;
+  padding: 0;
+  border-top: none;
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 17px;
-  line-height: 1.3;
-  letter-spacing: 0.01em;
+  font-weight: 900;
+  font-size: clamp(18px, 1.6vw, 22px);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   color: #fff !important;
-  padding-left: 28px;
-  margin-top: 4px;
+  transition: color 0.15s ease;
 }
 
 .footer-location-phone:hover {
   color: var(--orange-400) !important;
+  background: none;
 }
 
+/* Email row — below the location blocks */
 .footer-email-block {
-  margin-top: 10px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 0;
   display: flex;
   flex-direction: column;
+}
+
+.footer-email-link {
+  display: flex;
+  align-items: center;
   gap: 10px;
+  padding: 16px 0 0;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  transition: color 0.15s ease;
 }
 
-.footer-col--hours .footer-hours-content {
+.footer-email-link:hover {
+  color: var(--orange-400);
+}
+
+.footer-email-link .footer-contact-icon {
+  flex-shrink: 0;
+  margin-top: 0;
+  color: var(--orange-400);
+}
+
+.footer-email-link .footer-contact-text {
+  word-break: break-word;
+  min-width: 0;
+}
+
+.footer-info-hours .footer-hours-content {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 14px;
 }
 
-.footer-col--hours .footer-hours-item {
-  font-size: 16px;
+.footer-info-hours .footer-hours-item {
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.84);
-  line-height: 1.55;
+  line-height: 1.7;
   margin: 0;
 }
 
-.footer-col--hours .footer-hours-emergency {
+.footer-info-hours .footer-hours-emergency {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   color: var(--orange-400);
   font-weight: 600;
-  font-size: 16px;
-  line-height: 1.45;
-  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: rgba(236, 91, 19, 0.08);
+  border: 1px solid rgba(236, 91, 19, 0.2);
+  border-radius: 8px;
 }
 
-.footer-col--hours .footer-hours-emergency .footer-contact-icon {
+.footer-info-hours .footer-hours-emergency .footer-contact-icon {
   flex-shrink: 0;
   margin-top: 2px;
+  color: var(--orange-400);
 }
 
-.footer-col--hours .footer-hours-emergency-text {
+.footer-info-hours .footer-hours-emergency-text {
   min-width: 0;
 }
 
@@ -2029,15 +2191,44 @@ textarea:focus-visible {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
 }
 
+/* Nav links — animated dot reveal on hover */
 .footer-col--nav a {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   font-size: 16px;
   line-height: 1.5;
-  padding: 0;
+  padding: 5px 0;
+  color: rgba(255, 255, 255, 0.72);
   overflow-wrap: break-word;
+  position: relative;
+  transition: color 0.18s ease, padding-left 0.2s ease;
+}
+
+.footer-col--nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--orange-400);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  flex-shrink: 0;
+}
+
+.footer-col--nav a:hover {
+  color: #fff;
+  padding-left: 14px;
+}
+
+.footer-col--nav a:hover::before {
+  opacity: 1;
 }
 
 /* ---------- Footer: contact column ---------- */
@@ -2146,40 +2337,58 @@ textarea:focus-visible {
 }
 
 @media (max-width: 1080px) {
+  /* brand | nav on row 1; combined info spans full row 2 */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "brand nav"
+      "info  info";
+    column-gap: clamp(28px, 4vw, 40px);
+    row-gap: clamp(32px, 4vw, 44px);
+  }
+
+  .footer-col--brand { grid-area: brand; }
+  .footer-col--nav   { grid-area: nav; }
+  .footer-col--info  { grid-area: info; }
+
   .footer-col + .footer-col {
     margin-top: 0;
-  }
-
-  .footer-contact,
-  .footer-col--hours {
-    margin-top: 0;
-  }
-
-  /* Keep row-2 section headings aligned across columns */
-  .footer-contact > h4,
-  .footer-col--hours > h4 {
-    margin-top: 0;
-    margin-bottom: 18px;
   }
 
   .footer-col--nav {
     margin-top: 0;
   }
 
-  /* Brand column: add bottom padding so it doesn't feel too close
-     to row-2 content when the nav list is taller */
   .footer-col--brand {
     padding-bottom: 8px;
   }
 
-  /* Nav: keep comfortable gap at tablet */
   .footer-nav {
-    gap: 13px;
+    gap: 4px;
   }
 
-  /* Hours content: keep comfortable gap at tablet */
-  .footer-col--hours .footer-hours-content {
+  .footer-info-hours .footer-hours-content {
     gap: 13px;
+  }
+}
+
+/* Inner split collapses to stacked at 768px */
+@media (max-width: 768px) {
+  .footer-info-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-info-contact {
+    padding-right: 0;
+    padding-bottom: 28px;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-info-hours {
+    padding-left: 0;
+    border-left: none;
+    padding-top: 28px;
   }
 }
 
@@ -2188,10 +2397,16 @@ textarea:focus-visible {
     padding-top: 48px;
   }
 
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
   /* Each stacked column gets a top border + padding as a visual separator */
   .footer-col {
     padding-top: 32px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   /* Brand column sits at the very top — no top border needed */
@@ -2199,7 +2414,7 @@ textarea:focus-visible {
     padding-top: 0;
     border-top: none;
     gap: 14px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
   }
 
   .footer-col--brand .footer-social {
@@ -2208,51 +2423,90 @@ textarea:focus-visible {
 
   /* Section headings */
   .site-footer h4 {
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.14em;
     margin-bottom: 18px;
+    padding-bottom: 12px;
   }
 
-  /* Contact column */
-  .footer-contact,
-  .footer-col--hours,
+  .site-footer h4::after {
+    width: 20px;
+  }
+
+  /* Columns */
+  .footer-col--info,
   .footer-col--nav {
     margin-top: 0;
   }
 
+  /* On mobile, info col grid area must be cleared */
+  .footer-col--info {
+    grid-area: auto;
+  }
+
+  /* Inner split already stacked from 768px, but ensure clean mobile layout */
+  .footer-info-contact {
+    padding-right: 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-info-hours {
+    padding-left: 0;
+    border-left: none;
+    padding-top: 24px;
+  }
+
+  /* Already stacked from open layout; just ensure clean spacing */
   .footer-locations-grid {
-    gap: 24px;
+    gap: 0;
   }
 
   .footer-location-block {
-    gap: 8px;
+    padding-bottom: 18px;
   }
 
-  .footer-location-name {
-    font-size: 12px;
+  .footer-location-block + .footer-location-block {
+    padding-top: 18px;
   }
 
   .footer-location-phone {
-    font-size: 16px;
-    padding-left: 0;
-    margin-top: 4px;
+    font-size: clamp(16px, 4.5vw, 20px);
+  }
+
+  .footer-loc-address {
+    font-size: 13px;
   }
 
   .footer-contact-row {
     font-size: 15px;
   }
 
-  .footer-email-block {
-    margin-top: 10px;
-    padding-top: 16px;
+  .footer-email-link {
+    font-size: 13px;
+    padding-top: 14px;
+    margin-top: 16px;
+  }
+
+  .footer-info-hours .footer-hours-item {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer-info-hours .footer-hours-emergency {
+    font-size: 13px;
+    padding: 11px 13px;
+    margin-top: 14px;
   }
 
   /* Nav list */
   .footer-nav {
-    gap: 12px;
+    gap: 2px;
   }
 
   .footer-col--nav a {
     font-size: 16px;
+    padding: 5px 0;
   }
 
   /* Hours */
@@ -2264,10 +2518,10 @@ textarea:focus-visible {
     font-size: 15px;
   }
 
-  /* Emergency line — already flex from base, stays correct on mobile */
   .footer-col--hours .footer-hours-emergency {
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 10px;
+    padding: 11px 14px;
   }
 
   /* Bottom bar */
@@ -2280,33 +2534,83 @@ textarea:focus-visible {
   .footer-legal a {
     font-size: 14px;
   }
+
+  /* Tagline */
+  .footer-tagline {
+    font-size: 13px;
+  }
 }
 
-/* Utility links moved into the copyright bar, displayed inline */
+/* ---------- Social icons — rounded squares, lift on hover ---------- */
+.footer-social a {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: var(--orange-500);
+  border-color: var(--orange-500);
+  transform: translateY(-3px);
+}
+
+.footer-social a svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---------- Footer bottom — gradient separator, premium layout ---------- */
 .footer-bottom {
   flex-wrap: wrap;
+  border-top: none;
+  position: relative;
+  margin-top: 8px;
 }
+
+.footer-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.14) 20%,
+    rgba(255, 255, 255, 0.14) 80%,
+    transparent 100%
+  );
+}
+
 .footer-legal {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0 20px;
 }
+
 .footer-legal a {
   position: relative;
   color: rgba(255, 255, 255, 0.65);
   font-size: 15px;
   padding: 4px 0;
 }
+
 .footer-legal a:hover {
   color: var(--orange-400);
 }
+
 .footer-legal a + a::before {
   content: "·";
   position: absolute;
   left: -11px;
   color: rgba(255, 255, 255, 0.35);
 }
+
 @media (max-width: 640px) {
   .footer-bottom {
     flex-direction: column;

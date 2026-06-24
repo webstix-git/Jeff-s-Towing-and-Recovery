@@ -1120,7 +1120,7 @@ h1, h2, h3, h4 {
   );
   pointer-events: none;
 }
-.svc-tile .idx { font-family: var(--font-eyebrow); font-weight: 700; letter-spacing: .12em; font-size: 12px; color: var(--orange-400); text-shadow: 0 1px 8px rgba(8, 13, 22, 0.85); }
+.svc-tile .idx { font-family: var(--font-eyebrow); font-weight: 700; letter-spacing: .14em; font-size: 13px; color: var(--orange-400); text-shadow: 0 1px 8px rgba(8, 13, 22, 0.85); }
 .svc-tile h3 { font-size: clamp(24px, 2.4vw, 34px); margin: 10px 0 8px; color: #fff; text-shadow: 0 2px 16px rgba(8, 13, 22, 0.9); }
 .svc-tile p { font-size: 15.5px; color: rgba(255,255,255,.92); max-width: 42ch; line-height: 1.5; text-shadow: 0 1px 10px rgba(8, 13, 22, 0.85); }
 .svc-tile .go {
@@ -1146,7 +1146,15 @@ h1, h2, h3, h4 {
 .sm-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
 .sm-item .sm-ico { width: 30px; height: 30px; color: var(--navy-700); }
 .sm-item:hover .sm-ico { color: var(--orange-600); }
-.sm-item .sm-idx { font-family: var(--font-eyebrow); font-weight: 700; font-size: 12px; color: var(--steel-400); letter-spacing: .1em; }
+.sm-item .sm-idx {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 125%;
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1;
+  color: var(--orange-500);
+  letter-spacing: -0.02em;
+}
 .sm-item h4 { font-size: 22px; color: var(--navy-900); margin-bottom: 6px; }
 .sm-item p { font-size: 14.5px; color: var(--steel-500); line-height: 1.45; }
 
@@ -1170,7 +1178,7 @@ h1, h2, h3, h4 {
 .legacy-copy .lead + .lead { margin-top: 16px; }
 .values { display: flex; gap: 0; margin-top: 34px; border-top: 1px solid rgba(255,255,255,.14); }
 .value { flex: 1; padding-top: 22px; padding-right: 20px; }
-.value .v-num { font-family: var(--font-eyebrow); font-weight: 700; font-size: 12px; color: var(--orange-400); letter-spacing: .14em; }
+.value .v-num { font-family: var(--font-eyebrow); font-weight: 700; font-size: 15px; color: var(--orange-400); letter-spacing: .14em; }
 .value .v-lbl { font-family: var(--font-display); font-weight: 800; font-size: clamp(22px, 2vw, 28px); text-transform: uppercase; color: #fff; margin: 8px 0 6px; letter-spacing: -.01em; }
 .value p { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.45; }
 .memorial { margin-top: 30px; padding: 20px 24px; background: rgba(255,255,255,.04); border-left: 3px solid var(--amber); border-radius: 0 var(--r-md) var(--r-md) 0; font-style: italic; color: rgba(255,255,255,.78); font-size: 16px; }

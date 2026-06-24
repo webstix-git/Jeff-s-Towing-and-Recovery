@@ -110,19 +110,6 @@ export default function Page() {
           </div>
         </div>
 
-        <section className="cp-strip" aria-label="Emergency contact">
-          <div className="wrap cp-strip-inner">
-            <div className="cp-strip-copy">
-              <span className="pulse-dot" aria-hidden="true" />
-              <p>Need help right now? Our dispatch team answers around the clock across Berrien County.</p>
-            </div>
-            <a className="btn btn--call btn--lg" href={`tel:${site.primaryPhone.tel}`}>
-              <PhoneIcon />
-              Call {site.primaryPhone.display}
-            </a>
-          </div>
-        </section>
-
         <section className="cp-locations section" data-screen-label="Locations">
           <div className="wrap">
             <header className="cp-section-head reveal">

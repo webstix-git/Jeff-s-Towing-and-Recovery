@@ -119,7 +119,6 @@ export default function HomeContent() {
             <Link className="sm-item" href="/roadside-assistance/tire-changes">
               <div className="sm-top">
                 <span className="sm-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8"></circle><circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8"></circle><path d="M12 4v3M12 17v3M4 12h3M17 12h3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"></path></svg></span>
-                <span className="sm-idx">4</span>
               </div>
               <h4>Tire Changes</h4>
               <p>Flat on the shoulder? We swap on your spare safely, out of traffic.</p>
@@ -127,7 +126,6 @@ export default function HomeContent() {
             <Link className="sm-item" href="/roadside-assistance/jump-starts">
               <div className="sm-top">
                 <span className="sm-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"></path></svg></span>
-                <span className="sm-idx">5</span>
               </div>
               <h4>Jump Starts</h4>
               <p>Dead battery? We get you turning over and confirm a clean restart.</p>
@@ -135,7 +133,6 @@ export default function HomeContent() {
             <Link className="sm-item" href="/roadside-assistance/fuel-delivery">
               <div className="sm-top">
                 <span className="sm-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M7 21V6a2 2 0 012-2h4a2 2 0 012 2v15M5 21h12M15 9h2.5A1.5 1.5 0 0119 10.5V15a1.5 1.5 0 003 0V8l-2.5-2.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"></path></svg></span>
-                <span className="sm-idx">6</span>
               </div>
               <h4>Fuel Delivery</h4>
               <p>Out of gas between stations? We bring enough to get you to the pump.</p>
@@ -143,7 +140,6 @@ export default function HomeContent() {
             <Link className="sm-item" href="/roadside-assistance/lockout-services">
               <div className="sm-top">
                 <span className="sm-ico"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" strokeWidth="1.8"></rect><path d="M8 11V8a4 4 0 018 0v3" stroke="currentColor" strokeWidth="1.8"></path><circle cx="12" cy="15.5" r="1.4" fill="currentColor"></circle></svg></span>
-                <span className="sm-idx">7</span>
               </div>
               <h4>Lockout Service</h4>
               <p>Keys locked inside? We get you back in without damage — fast.</p>
