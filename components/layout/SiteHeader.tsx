@@ -108,7 +108,7 @@ export default function SiteHeader() {
         <div className="drawer-scrim" />
         <div className="drawer-panel">
           <div className="d-head">
-            <img src="/images/logo.png" alt={site.legalName} width="120" height="44" />
+            <img src="/images/logo.png" alt={site.legalName} width="92" height="52" />
             <button className="drawer-close" aria-label="Close menu">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path

@@ -1,0 +1,599 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/contact-us/contact.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+/* ============================================================
+   CONTACT US PAGE — scoped redesign (contact-us only)
+   ============================================================ */
+
+.contact-page {
+  background: var(--bone);
+}
+
+/* ---------- Emergency strip ---------- */
+.cp-strip {
+  background: var(--navy-900);
+  color: #fff;
+  padding-block: clamp(22px, 3vw, 32px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cp-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cp-strip-copy {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 52ch;
+}
+
+.cp-strip-copy p {
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cp-strip .pulse-dot {
+  flex: none;
+}
+
+/* ---------- Section headers ---------- */
+.cp-section-head {
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.cp-section-head .eyebrow {
+  margin-bottom: 12px;
+}
+
+.cp-section-head .h-xl,
+.cp-section-head .h-lg {
+  margin-bottom: 14px;
+}
+
+.cp-section-head .lead {
+  max-width: 58ch;
+}
+
+/* ---------- Locations ---------- */
+.cp-locations {
+  padding-block: clamp(56px, 8vw, 96px);
+}
+
+.cp-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: clamp(24px, 3vw, 36px);
+  gap: clamp(24px, 3vw, 36px);
+}
+
+/* ============================================================
+   PREMIUM LOCATION CARD — dark navy, editorial, no map
+   ============================================================ */
+
+.cp-loc-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--navy-900);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(11, 19, 31, 0.22), 0 2px 6px rgba(11, 19, 31, 0.12);
+  transition: box-shadow 0.28s ease, transform 0.28s ease;
+  color: #fff;
+}
+
+.cp-loc-card:hover {
+  box-shadow: 0 24px 60px rgba(11, 19, 31, 0.36);
+  transform: translateY(-5px);
+}
+
+/* ---- Card body ---- */
+.cp-loc-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  padding: 0;
+  gap: 0;
+  border-top: 3px solid var(--orange-500);
+}
+
+/* ---- Header section — large city name + badge ---- */
+.cp-loc-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 32px 32px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  background: linear-gradient(135deg,
+    rgba(36, 64, 94, 0.55) 0%,
+    rgba(11, 19, 31, 0.2) 100%);
+}
+
+/* Large decorative location number */
+.cp-loc-card:nth-child(1) .cp-loc-header::after { content: "01"; }
+.cp-loc-card:nth-child(2) .cp-loc-header::after { content: "02"; }
+
+.cp-loc-header::after {
+  position: absolute;
+  right: -8px;
+  top: -14px;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 125%;
+  font-size: 130px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  letter-spacing: -0.04em;
+}
+
+.cp-loc-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 5px 13px;
+  background: rgba(236, 91, 19, 0.16);
+  color: var(--orange-400);
+  border: 1px solid rgba(236, 91, 19, 0.32);
+  font-family: var(--font-eyebrow);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.cp-loc-header h3 {
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  margin: 0;
+  font-size: clamp(22px, 3vw, 40px);
+  font-weight: 900;
+  font-stretch: 125%;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---- Info rows ---- */
+.cp-loc-rows {
+  display: grid;
+  grid-gap: 0;
+  gap: 0;
+}
+
+.cp-loc-row {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.cp-loc-row-content {
+  flex: 1 1;
+  min-width: 0;
+}
+
+/* Icon circles — subtle on dark background */
+.cp-loc-icon {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--orange-400);
+  display: grid;
+  place-items: center;
+}
+
+.cp-loc-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Row labels */
+.cp-loc-label {
+  display: block;
+  font-family: var(--font-eyebrow);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 8px;
+}
+
+/* Address */
+.cp-loc-address {
+  display: grid;
+  grid-gap: 4px;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.45;
+  transition: color 0.18s ease;
+}
+
+.cp-loc-address:hover {
+  color: var(--orange-400);
+}
+
+.cp-loc-address span:last-child {
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.cp-loc-address:hover span:last-child {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Phone-only row — no icon or label, button fills the row */
+.cp-loc-row--phone {
+  padding: 20px 32px;
+}
+
+/* Call button — full width orange */
+.cp-loc-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 0;
+  padding: 15px 20px;
+  background: var(--orange-500);
+  color: #fff;
+  font-family: var(--font-eyebrow);
+  font-weight: 800;
+  font-size: clamp(15px, 1.5vw, 17px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--r-md);
+  box-shadow: 0 4px 20px rgba(236, 91, 19, 0.38);
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cp-loc-phone svg {
+  width: 17px;
+  height: 17px;
+  flex: none;
+}
+
+.cp-loc-phone:hover {
+  background: var(--orange-600);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(236, 91, 19, 0.50);
+}
+
+/* Get Directions — text link footer */
+.cp-loc-directions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: auto;
+  width: 100%;
+  padding: 18px 32px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.72) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-eyebrow);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: background 0.18s ease, color 0.18s ease;
+  /* reset btn classes */
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  min-height: auto;
+  padding-block: 18px;
+}
+
+.cp-loc-directions svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cp-loc-directions:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff !important;
+  transform: none;
+}
+
+.cp-loc-directions:hover svg {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+/* ---------- Social block (below info cards in aside) ---------- */
+.cp-social-block {
+  margin-top: 20px;
+  padding: 24px 28px;
+  background: var(--surface);
+  border: 1px solid var(--steel-200);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.cp-social-label {
+  font-family: var(--font-eyebrow);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-800);
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--orange-500);
+  display: inline-block;
+}
+
+.cp-social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.cp-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1;
+  padding: 12px 16px;
+  background: var(--navy-900);
+  color: rgba(255, 255, 255, 0.88);
+  border-radius: var(--r-md);
+  font-family: var(--font-eyebrow);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.18s ease, transform 0.18s ease, color 0.18s ease;
+  justify-content: center;
+}
+
+.cp-social-link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.cp-social-link:hover {
+  background: var(--orange-500);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .cp-social-block {
+    padding: 20px 18px;
+  }
+
+  .cp-social-link {
+    font-size: 12px;
+    padding: 11px 14px;
+    gap: 8px;
+  }
+}
+
+/* ---------- Connect (email/hours + form) ---------- */
+.cp-connect {
+  padding-block: clamp(56px, 8vw, 96px);
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.45) 100%);
+  border-top: 1px solid var(--steel-200);
+}
+
+.cp-connect-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  grid-gap: clamp(32px, 5vw, 72px);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+
+.cp-info-cards {
+  display: grid;
+  grid-gap: 16px;
+  gap: 16px;
+}
+
+.cp-info-card {
+  display: flex;
+  gap: 18px;
+  padding: clamp(22px, 3vw, 28px);
+  background: var(--surface);
+  border: 1px solid var(--steel-200);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.cp-info-icon {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--navy-900);
+  color: var(--orange-500);
+  display: grid;
+  place-items: center;
+}
+
+.cp-info-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cp-info-card h3 {
+  font-size: 15px;
+  color: var(--navy-900);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.cp-info-note {
+  font-size: 13px;
+  color: var(--steel-500);
+  margin-bottom: 8px;
+}
+
+.cp-info-card a {
+  color: var(--orange-600);
+  font-weight: 700;
+  font-size: 17px;
+  word-break: break-word;
+}
+
+.cp-info-card a:hover {
+  text-decoration: underline;
+}
+
+.cp-info-card p {
+  font-size: 15px;
+  color: var(--steel-500);
+  line-height: 1.55;
+}
+
+.cp-info-emergency {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--steel-200);
+  color: var(--navy-800) !important;
+  font-weight: 600;
+}
+
+.cp-form-panel {
+  background: var(--surface);
+  border: 1px solid var(--steel-200);
+  border-radius: var(--r-lg);
+  padding: clamp(26px, 4vw, 36px);
+  box-shadow: var(--shadow-md);
+}
+
+.cp-form-panel .cp-section-head {
+  margin-bottom: 24px;
+}
+
+.cp-form-panel .cp-section-head .lead {
+  font-size: 16px;
+}
+
+.contact-page .contact-form {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .cp-locations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cp-connect-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cp-strip-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cp-strip .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cp-loc-header {
+    padding: 26px 24px 22px;
+    gap: 12px;
+  }
+
+  .cp-loc-header::after {
+    font-size: 100px;
+  }
+
+  .cp-loc-header h3 {
+    font-size: clamp(20px, 4vw, 34px);
+  }
+
+  .cp-loc-row {
+    padding: 18px 24px;
+    gap: 14px;
+  }
+
+  .cp-loc-directions {
+    padding-block: 16px;
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cp-locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cp-loc-header {
+    padding: 22px 20px 18px;
+    gap: 10px;
+  }
+
+  .cp-loc-header::after {
+    font-size: 80px;
+    top: -8px;
+    right: -4px;
+  }
+
+  .cp-loc-header h3 {
+    font-size: clamp(20px, 6vw, 30px);
+  }
+
+  .cp-loc-row {
+    padding: 16px 20px;
+    gap: 14px;
+  }
+
+  .cp-loc-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .cp-loc-address {
+    font-size: 16px;
+  }
+
+  .cp-loc-directions {
+    padding-block: 15px;
+    padding-inline: 20px;
+  }
+
+  .cp-form-panel {
+    padding: 22px 18px;
+  }
+
+  .cp-info-card {
+    padding: 20px 18px;
+  }
+}
+

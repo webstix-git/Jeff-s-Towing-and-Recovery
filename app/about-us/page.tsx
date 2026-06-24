@@ -110,7 +110,7 @@ export default function Page() {
 
       <SubPageHero
         eyebrow="Family-Run · Berrien County"
-        title="The Story Behind The Trucks"
+        title="About Us"
         subtitle="Founded by a first responder, run like a family, and built on showing up when it counts."
         image="/images/legacy.jpg"
         imageAlt="Flatbed towing a vehicle in winter conditions"

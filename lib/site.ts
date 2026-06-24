@@ -117,7 +117,8 @@ export const site = {
   ],
 
   social: {
-    facebook: "https://www.facebook.com/",
+    facebook: "https://www.facebook.com/JeffsTowingLLC/",
+    instagram: "https://www.instagram.com/jeffstowing/",
     /** Opens the Benton Harbor location on Google Maps with reviews visible */
     googleReviews: "https://maps.app.goo.gl/GEJNAxhEfDytu52m9",
   },

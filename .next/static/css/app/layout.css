@@ -749,26 +749,26 @@ h1, h2, h3, h4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: clamp(24px, 2.5vw, 36px);
   gap: clamp(24px, 2.5vw, 36px);
-  align-items: stretch;
-  padding-bottom: 48px;
+  align-items: start;
+  padding-bottom: clamp(32px, 4vw, 48px);
 }
 .site-footer h4 {
   color: #fff;
   font-family: var(--font-eyebrow);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  line-height: 1.3;
-  margin: 0 0 14px;
+  line-height: 1.35;
+  margin: 0 0 18px;
 }
-.site-footer a { color: rgba(255,255,255,.78); transition: color .15s; }
+.site-footer a { color: rgba(255,255,255,.84); transition: color .15s; }
 .site-footer a:hover { color: var(--orange-400); }
-.footer-logo { height: 120px; width: auto; margin-bottom: 20px; }
+.footer-logo { height: 120px; width: auto; margin-bottom: 0; }
 .footer-bottom {
-  border-top: 1px solid var(--navy-line); padding-block: 22px;
+  border-top: 1px solid var(--navy-line); padding-block: 24px;
   display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  font-size: 14px; color: rgba(255,255,255,.5);
+  font-size: 15px; color: rgba(255,255,255,.62);
 }
 .footer-loc { margin-bottom: 0; }
 
@@ -818,7 +818,18 @@ h1, h2, h3, h4 {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1080px) {
-  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3vw, 32px); }
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "brand nav"
+      "contact hours";
+    column-gap: clamp(28px, 4vw, 40px);
+    row-gap: clamp(32px, 4vw, 44px);
+  }
+  .footer-col--brand { grid-area: brand; }
+  .footer-col--nav { grid-area: nav; }
+  .footer-contact { grid-area: contact; }
+  .footer-col--hours { grid-area: hours; }
   .grid-4 { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 1080px) {
@@ -846,7 +857,20 @@ h1, h2, h3, h4 {
   .brand-tag { display: none; }
   .trust-strip .wrap { grid-template-columns: 1fr; }
   .trust-item { border-right: none; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    gap: 0;
+  }
+  /* Reset named grid-area so columns auto-place in the single-column grid */
+  .footer-col--brand,
+  .footer-col--nav,
+  .footer-contact,
+  .footer-col--hours {
+    grid-area: auto;
+  }
+  /* Extra bottom padding so footer-bottom clears the sticky call bar */
+  .site-footer { padding-bottom: 80px; }
   .to-top { bottom: 84px; }
   .grid-4 { grid-template-columns: 1fr; }
   /* mobile sticky call bar */
@@ -873,14 +897,20 @@ h1, h2, h3, h4 {
 }
 .drawer.open .drawer-panel { transform: translateX(0); }
 .drawer-panel .d-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
-.drawer-panel .d-head img { height: 44px; }
+.drawer-panel .d-head img {
+  height: 52px;
+  width: auto;
+  max-width: none;
+  flex-shrink: 0;
+  object-fit: contain;
+}
 .drawer-close { color: #fff; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 8px; background: rgba(255,255,255,.08); }
-.drawer-panel a {
+.drawer-panel nav a {
   display: block; color: #fff; font-family: var(--font-display); font-weight: 700;
-  text-transform: uppercase; font-size: 24px; padding: 12px 0;
+  text-transform: uppercase; font-size: 18px; padding: 10px 0;
   border-bottom: 1px solid var(--navy-line); letter-spacing: .01em;
 }
-.drawer-panel .d-sub a { font-family: var(--font-body); font-size: 17px; text-transform: none; font-weight: 600; color: rgba(255,255,255,.7); padding: 8px 0 8px 16px; border: none; }
+.drawer-panel .d-sub a { font-family: var(--font-body); font-size: 15px; text-transform: none; font-weight: 600; color: rgba(255,255,255,.7); padding: 6px 0 6px 14px; border: none; }
 .drawer-panel .d-phone { margin-top: 24px; }
 
 
@@ -952,16 +982,63 @@ h1, h2, h3, h4 {
 
 /* ---------- TRUST BAR ---------- */
 .trust-bar { background: var(--navy-950); border-bottom: 1px solid rgba(255,255,255,.07); }
-.trust-bar .wrap { display: flex; align-items: stretch; flex-wrap: wrap; }
-.tb-item {
-  flex: 1 1; min-width: 200px; display: flex; align-items: center; gap: 16px;
-  padding: 24px 30px; border-right: 1px solid rgba(255,255,255,.08); color: #fff;
+.trust-bar .wrap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 0;
+  gap: 0;
 }
-.tb-item:last-child { border-right: none; }
+.tb-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 24px clamp(18px, 2.5vw, 30px);
+  border-right: 1px solid rgba(255,255,255,.08);
+  color: #fff;
+}
+.tb-item:nth-child(4) { border-right: none; }
 .tb-ico { width: 38px; height: 38px; color: var(--orange-500); flex: none; }
 .tb-ico svg { width: 100%; height: 100%; }
-.tb-item strong { display: block; font-family: var(--font-display); font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: -.01em; line-height: 1.05; }
-.tb-item span { font-size: 13.5px; color: rgba(255,255,255,.6); }
+.tb-item > div {
+  min-width: 0;
+  flex: 1 1;
+}
+.tb-item strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(15px, 1.4vw, 18px);
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  line-height: 1.15;
+}
+.tb-item span {
+  display: block;
+  font-size: 13.5px;
+  color: rgba(255,255,255,.6);
+  line-height: 1.35;
+}
+
+@media (max-width: 1024px) {
+  .trust-bar .wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trust-bar .tb-item {
+    padding: 20px clamp(14px, 2.5vw, 24px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: none;
+  }
+
+  .trust-bar .tb-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .trust-bar .tb-item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
 
 /* ---------- INTRO / LOCAL BAND ---------- */
 .intro { background: var(--bone); overflow: hidden; }
@@ -1245,9 +1322,9 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 980px) {
   .intro-grid { grid-template-columns: 1fr; }
-  .intro-media { max-width: 460px; }
+  .intro-media { max-width: 100%; }
   .legacy-grid { grid-template-columns: 1fr; }
-  .legacy-media { max-width: 460px; }
+  .legacy-media { max-width: 100%; }
   .areas-grid { grid-template-columns: 1fr; }
   .cta-grid { grid-template-columns: 1fr; }
   .svc-head-lead { width: 100%; max-width: 100%; }
@@ -1262,6 +1339,7 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 768px) {
   .hero .hero-title { font-size: 36px; }
+  .svc-head-title { font-size: clamp(26px, 7.5vw, 38px); }
 }
 @media (max-width: 560px) {
   .loc-cards { grid-template-columns: 1fr; }
@@ -1720,8 +1798,17 @@ textarea:focus-visible {
   }
 }
 
-/* Mobile — compact, well-padded header that still shows a clear logo, a
-   prominent number-only call button, and the menu toggle, all on one line. */
+/* Hide the header call button below 768px — the mobile sticky bar handles calls. */
+@media (max-width: 767px) {
+  .site-header .header-cta {
+    display: none;
+  }
+  .nav-toggle {
+    margin-left: auto;
+  }
+}
+
+/* Mobile — compact, well-padded header with logo and menu toggle only. */
 @media (max-width: 640px) {
   :root {
     --header-h: 84px;
@@ -1742,21 +1829,7 @@ textarea:focus-visible {
   .site-header.scrolled .brand img {
     height: 54px;
   }
-  /* Keep the call button visible and tappable, just more compact. */
-  .site-header .header-cta {
-    display: flex;
-  }
-  .site-header .header-cta .btn--call {
-    font-size: 14px;
-    padding: 11px 14px;
-    min-height: 44px;
-  }
-  .site-header .header-cta .btn--call svg {
-    width: 16px;
-    height: 16px;
-  }
   .nav-toggle {
-    margin-left: 8px;
     width: 44px;
     height: 44px;
   }
@@ -1770,11 +1843,20 @@ textarea:focus-visible {
   gap: 12px;
 }
 .d-phones .btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   white-space: normal;
   min-height: auto;
-  padding: 14px 16px;
+  padding: 12px 16px;
   justify-content: flex-start;
   text-align: left;
+  gap: 12px;
+}
+.d-phones .btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 .d-phone-text {
   display: flex;
@@ -1782,6 +1864,7 @@ textarea:focus-visible {
   align-items: flex-start;
   gap: 2px;
   min-width: 0;
+  flex: 1 1;
 }
 .d-phone-label {
   font-size: 11px;
@@ -1795,16 +1878,31 @@ textarea:focus-visible {
   line-height: 1.2;
 }
 
+/* ---------- Footer: logo responsive sizing ---------- */
+@media (max-width: 1024px) {
+  .footer-logo {
+    height: 140px;
+    width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-logo {
+    height: 130px;
+    width: auto;
+  }
+}
+
 /* ---------- Footer: grid columns ---------- */
 .footer-col {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  height: 100%;
 }
 
 .footer-col--brand {
   align-items: flex-start;
+  gap: 16px;
 }
 
 .footer-col--brand .footer-social {
@@ -1839,35 +1937,44 @@ textarea:focus-visible {
 .footer-locations-grid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 22px;
 }
 
 .footer-location-block {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .footer-location-name {
   font-family: var(--font-eyebrow);
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--orange-400);
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.35;
+}
+
+.footer-location-block .footer-location-name {
+  margin-top: 2px;
+}
+
+.footer-location-block .footer-contact-row {
+  margin-top: 2px;
 }
 
 .footer-location-phone {
   display: block;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.3;
   letter-spacing: 0.01em;
   color: #fff !important;
   padding-left: 28px;
+  margin-top: 4px;
 }
 
 .footer-location-phone:hover {
@@ -1875,24 +1982,24 @@ textarea:focus-visible {
 }
 
 .footer-email-block {
-  margin-top: 4px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footer-col--hours .footer-hours-content {
+  margin-top: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.footer-col--hours .footer-hours-content {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
 .footer-col--hours .footer-hours-item {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.5;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -1902,19 +2009,17 @@ textarea:focus-visible {
   gap: 10px;
   color: var(--orange-400);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.45;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .footer-col--hours .footer-hours-emergency .footer-contact-icon {
+  flex-shrink: 0;
   margin-top: 2px;
 }
 
 .footer-col--hours .footer-hours-emergency-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
   min-width: 0;
 }
 
@@ -1924,13 +2029,13 @@ textarea:focus-visible {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-col--nav a {
   display: block;
-  font-size: 15px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.5;
   padding: 0;
   overflow-wrap: break-word;
 }
@@ -1943,7 +2048,7 @@ textarea:focus-visible {
 .footer-contact-section {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .footer-contact-section + .footer-contact-section {
@@ -1960,9 +2065,9 @@ textarea:focus-visible {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 15px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.84);
 }
 
 .footer-contact-icon {
@@ -2006,7 +2111,7 @@ textarea:focus-visible {
 
 .footer-email .footer-contact-text {
   word-break: break-word;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.84);
 }
 
 /* Hours of Operation block */
@@ -2022,9 +2127,9 @@ textarea:focus-visible {
 }
 
 .footer-hours p {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.5;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.55;
 }
 
 .footer-emergency {
@@ -2044,21 +2149,136 @@ textarea:focus-visible {
   .footer-col + .footer-col {
     margin-top: 0;
   }
-}
-
-@media (max-width: 640px) {
-  .footer-location-phone {
-    font-size: 15px;
-    padding-left: 0;
-  }
-
-  .footer-col--brand .footer-social {
-    margin-top: 0;
-  }
 
   .footer-contact,
   .footer-col--hours {
+    margin-top: 0;
+  }
+
+  /* Keep row-2 section headings aligned across columns */
+  .footer-contact > h4,
+  .footer-col--hours > h4 {
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  .footer-col--nav {
+    margin-top: 0;
+  }
+
+  /* Brand column: add bottom padding so it doesn't feel too close
+     to row-2 content when the nav list is taller */
+  .footer-col--brand {
+    padding-bottom: 8px;
+  }
+
+  /* Nav: keep comfortable gap at tablet */
+  .footer-nav {
+    gap: 13px;
+  }
+
+  /* Hours content: keep comfortable gap at tablet */
+  .footer-col--hours .footer-hours-content {
+    gap: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding-top: 48px;
+  }
+
+  /* Each stacked column gets a top border + padding as a visual separator */
+  .footer-col {
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Brand column sits at the very top — no top border needed */
+  .footer-col--brand {
+    padding-top: 0;
+    border-top: none;
+    gap: 14px;
+    padding-bottom: 4px;
+  }
+
+  .footer-col--brand .footer-social {
     margin-top: 4px;
+  }
+
+  /* Section headings */
+  .site-footer h4 {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  /* Contact column */
+  .footer-contact,
+  .footer-col--hours,
+  .footer-col--nav {
+    margin-top: 0;
+  }
+
+  .footer-locations-grid {
+    gap: 24px;
+  }
+
+  .footer-location-block {
+    gap: 8px;
+  }
+
+  .footer-location-name {
+    font-size: 12px;
+  }
+
+  .footer-location-phone {
+    font-size: 16px;
+    padding-left: 0;
+    margin-top: 4px;
+  }
+
+  .footer-contact-row {
+    font-size: 15px;
+  }
+
+  .footer-email-block {
+    margin-top: 10px;
+    padding-top: 16px;
+  }
+
+  /* Nav list */
+  .footer-nav {
+    gap: 12px;
+  }
+
+  .footer-col--nav a {
+    font-size: 16px;
+  }
+
+  /* Hours */
+  .footer-col--hours .footer-hours-content {
+    gap: 12px;
+  }
+
+  .footer-col--hours .footer-hours-item {
+    font-size: 15px;
+  }
+
+  /* Emergency line — already flex from base, stays correct on mobile */
+  .footer-col--hours .footer-hours-emergency {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    margin-top: 8px;
+    padding-block: 20px;
+    font-size: 14px;
+  }
+
+  .footer-legal a {
+    font-size: 14px;
   }
 }
 
@@ -2074,8 +2294,8 @@ textarea:focus-visible {
 }
 .footer-legal a {
   position: relative;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
   padding: 4px 0;
 }
 .footer-legal a:hover {
@@ -2085,7 +2305,7 @@ textarea:focus-visible {
   content: "·";
   position: absolute;
   left: -11px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.35);
 }
 @media (max-width: 640px) {
   .footer-bottom {
@@ -2600,66 +2820,7 @@ textarea:focus-visible {
   color: var(--orange-500);
 }
 
-/* ---------- Contact page ---------- */
-.contact-section {
-  background: var(--bone);
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: clamp(36px, 5vw, 64px);
-  gap: clamp(36px, 5vw, 64px);
-  align-items: start;
-}
-.contact-cards {
-  display: grid;
-  grid-gap: 16px;
-  gap: 16px;
-}
-.contact-card {
-  display: flex;
-  gap: 16px;
-  background: var(--surface);
-  border: 1px solid var(--steel-200);
-  border-radius: var(--r-md);
-  padding: 22px 24px;
-}
-.contact-card .ci {
-  flex: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--navy-900);
-  color: var(--orange-500);
-  display: grid;
-  place-items: center;
-}
-.contact-card .ci svg {
-  width: 22px;
-  height: 22px;
-}
-.contact-card h3 {
-  font-size: 15px;
-  color: var(--navy-900);
-  letter-spacing: 0.04em;
-  margin-bottom: 6px;
-}
-.contact-card a {
-  color: var(--orange-600);
-  font-weight: 600;
-  display: block;
-  font-size: 17px;
-}
-.contact-card a:hover {
-  text-decoration: underline;
-}
-.contact-card p {
-  font-size: 15px;
-  color: var(--steel-500);
-  line-height: 1.5;
-}
-
-/* ---------- Form ---------- */
+/* ---------- Form (contact page) ---------- */
 .contact-form {
   background: var(--surface);
   border: 1px solid var(--steel-200);
@@ -2885,9 +3046,6 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
   .hub-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-grid {
     grid-template-columns: 1fr;
   }
   .index-list {

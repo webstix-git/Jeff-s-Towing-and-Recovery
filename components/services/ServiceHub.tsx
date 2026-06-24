@@ -121,7 +121,7 @@ export default function ServiceHub({
             {eyebrow}
           </span>
           <h1 className="h-xxl" style={{ fontSize: "clamp(40px, 5.4vw, 76px)" }}>
-            {heroTitle}
+            {name}
           </h1>
           <p className="hero-sub">{heroSubtitle}</p>
           <div className="hero-actions">

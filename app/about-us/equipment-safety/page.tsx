@@ -37,7 +37,7 @@ export default function Page() {
 
       <SubPageHero
         eyebrow="Equipment & Safety"
-        title="The Right Gear, Used The Right Way"
+        title="Equipment & Safety"
         subtitle="Good equipment is only half of it. The other half is the careful habits behind every load."
         image="/images/svc-flatbed-towing.png"
         imageAlt="Vehicle secured on a flatbed tow truck with tie-down straps"

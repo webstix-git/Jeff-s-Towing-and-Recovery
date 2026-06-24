@@ -45,7 +45,7 @@ export default function Page() {
 
       <SubPageHero
         eyebrow="Where We Go"
-        title="Covering All Of Berrien County"
+        title="Service Areas"
         subtitle="Two locations, fast response, and the local knowledge to find you quickly."
         image="/images/intro-snow.jpg"
         imageAlt="Recovering a vehicle on a snowy Berrien County road"

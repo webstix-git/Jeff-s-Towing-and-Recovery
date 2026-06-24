@@ -1,4 +1,4 @@
-// File: /home/vijay/Documents/vijay Projects/All Projects/AI Projects/Jeff-towing/Development/V2/Jeff-s-Towing-and-Recovery-main/app/page.tsx
+// File: /home/vijay/Documents/vijay Projects/All Projects/AI Projects/AI Projects Development/Jeff-towing/Development/V2/Jeff-s-Towing-and-Recovery-main/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

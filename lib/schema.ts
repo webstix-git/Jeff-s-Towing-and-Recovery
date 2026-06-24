@@ -65,7 +65,7 @@ export function localBusinessSchema() {
         email: site.email,
         telephone: site.primaryPhone.tel,
         logo: absolute("/images/logo.png"),
-        sameAs: [site.social.facebook],
+        sameAs: [site.social.facebook, site.social.instagram],
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: site.rating.value,

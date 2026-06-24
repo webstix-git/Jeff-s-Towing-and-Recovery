@@ -67,7 +67,7 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
             {content.heroEyebrow}
           </span>
           <h1 className="h-xxl" style={{ fontSize: "clamp(40px, 5.4vw, 76px)" }}>
-            {content.heroTitle}
+            {content.name}
           </h1>
           <p className="hero-sub">{content.heroSubtitle}</p>
           <div className="hero-actions">
