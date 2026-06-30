@@ -1,9 +1,7 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/icon0.svg/route": "app/icon0.svg/route.js",
-  "/page": "app/page.js",
-  "/towing-services/page": "app/towing-services/page.js",
-  "/roadside-assistance/page": "app/roadside-assistance/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/about-us/page": "app/about-us/page.js",
-  "/contact-us/page": "app/contact-us/page.js"
+  "/faq/page": "app/faq/page.js"
 }
