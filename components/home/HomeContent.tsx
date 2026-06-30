@@ -153,10 +153,6 @@ export default function HomeContent() {
         <div className="wrap legacy-grid">
           <div className="legacy-media reveal">
             <div className="frame"><img src="/images/legacy.jpg" alt="Flatbed towing a vehicle in winter conditions" /></div>
-            <div className="tab">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.9 7.2 17l.9-5.4L4.2 7.7l5.4-.8L12 2z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"></path></svg>
-              <div><strong>Bridgman City Police</strong><span>& Lake Township Fire Dept.</span></div>
-            </div>
           </div>
           <div className="legacy-copy reveal d1">
             <span className="eyebrow on-dark">Our Legacy</span>

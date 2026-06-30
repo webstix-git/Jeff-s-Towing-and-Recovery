@@ -26,6 +26,29 @@ const PhoneIcon = () => (
   </svg>
 );
 
+function HeaderContactPanel() {
+  return (
+    <div className="header-contact" aria-label="Location phone numbers">
+      {site.phones.map((phone) => (
+        <a
+          key={phone.tel}
+          className="header-phone-link"
+          href={`tel:${phone.tel}`}
+          aria-label={`Call ${phone.label} at ${phone.display}`}
+        >
+          <span className="header-phone-icon" aria-hidden="true">
+            <PhoneIcon />
+          </span>
+          <span className="header-phone-copy">
+            <span className="header-phone-label">{phone.label}</span>
+            <span className="header-phone-num">{phone.display}</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export default function SiteHeader() {
   const pathname = usePathname();
 
@@ -38,70 +61,52 @@ export default function SiteHeader() {
   return (
     <>
       <div className="header-shell header-shell--float">
-        <div className="header-topbar" aria-label="Location phone numbers">
-          <div className="wrap header-topbar-inner">
-            <p className="header-topbar-note">{site.hours.badge}</p>
-            <div className="header-topbar-phones">
-              {site.phones.map((phone) => (
-                <a
-                  key={phone.tel}
-                  className="topbar-call btn btn--call"
-                  href={`tel:${phone.tel}`}
-                  aria-label={`Call ${phone.label} at ${phone.display}`}
-                >
-                  <PhoneIcon />
-                  <span className="topbar-call-text">
-                    <span className="topbar-call-label">{phone.label}</span>
-                    <span className="topbar-call-num">{phone.display}</span>
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
+        <div className="wrap header-frame">
+          <header className="site-header site-header--float" data-screen-label="Header">
+            <div className="header-unified">
+              <Link className="brand" href="/" aria-label={`${site.legalName} home`}>
+                <img src="/images/logo.png" alt={site.legalName} width="213" height="100" />
+              </Link>
 
-        <header className="site-header site-header--float" data-screen-label="Header">
-          <div className="wrap">
-            <Link className="brand" href="/" aria-label={`${site.legalName} home`}>
-              <img src="/images/logo.png" alt={site.legalName} width="213" height="100" />
-            </Link>
-
-            <nav className="nav" aria-label="Primary">
-              {mainNav.map((item) =>
-                item.children ? (
-                  <div className="nav-item" key={item.href}>
+              <div className="header-menu">
+                <HeaderContactPanel />
+                <nav className="nav" aria-label="Primary">
+                {mainNav.map((item) =>
+                  item.children ? (
+                    <div className="nav-item" key={item.href}>
+                      <Link
+                        href={item.href}
+                        className={isActive(item) ? "active" : undefined}
+                        aria-haspopup="true"
+                      >
+                        {item.label}
+                        <ChevronIcon />
+                      </Link>
+                      <div className="dropdown">
+                        {item.overviewLabel ? (
+                          <Link href={item.href}>{item.overviewLabel}</Link>
+                        ) : null}
+                        {item.children.map((child) => (
+                          <Link key={child.href} href={child.href}>
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
                     <Link
+                      key={item.href}
                       href={item.href}
                       className={isActive(item) ? "active" : undefined}
-                      aria-haspopup="true"
                     >
                       {item.label}
-                      <ChevronIcon />
                     </Link>
-                    <div className="dropdown">
-                      {item.overviewLabel ? (
-                        <Link href={item.href}>{item.overviewLabel}</Link>
-                      ) : null}
-                      {item.children.map((child) => (
-                        <Link key={child.href} href={child.href}>
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={isActive(item) ? "active" : undefined}
-                  >
-                    {item.label}
-                  </Link>
-                ),
-              )}
-            </nav>
+                  ),
+                )}
+                </nav>
+              </div>
 
-            <button className="nav-toggle" aria-label="Open menu" aria-haspopup="true">
+              <button className="nav-toggle" aria-label="Open menu" aria-haspopup="true">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path
                   d="M4 7h16M4 12h16M4 17h16"
@@ -111,8 +116,9 @@ export default function SiteHeader() {
                 />
               </svg>
             </button>
-          </div>
-        </header>
+            </div>
+          </header>
+        </div>
       </div>
 
       <div className="drawer" role="dialog" aria-modal="true" aria-label="Menu">
@@ -132,6 +138,10 @@ export default function SiteHeader() {
             </button>
           </div>
 
+          <div className="drawer-contact">
+            <HeaderContactPanel />
+          </div>
+
           <nav aria-label="Mobile">
             {mainNav.map((item) => (
               <div key={item.href}>
@@ -148,22 +158,6 @@ export default function SiteHeader() {
               </div>
             ))}
           </nav>
-
-          <div className="d-phones">
-            {site.phones.map((phone) => (
-              <a
-                key={phone.tel}
-                className="btn btn--call btn--block"
-                href={`tel:${phone.tel}`}
-              >
-                <PhoneIcon />
-                <span className="d-phone-text">
-                  <span className="d-phone-label">{phone.label}</span>
-                  <span className="d-phone-num">{phone.display}</span>
-                </span>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </>

@@ -8,7 +8,7 @@
   color: #fff;
   overflow: hidden;
   isolation: isolate;
-  padding-top: var(--header-h);
+  padding-top: calc(var(--header-h) + var(--topbar-h, 0px));
 }
 
 .svc-page-hero .hero-bg {

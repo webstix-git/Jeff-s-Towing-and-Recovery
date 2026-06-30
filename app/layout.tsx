@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import "./services.css";
 import "./pages.css";
 import { SITE_URL, site } from "@/lib/site";
 import { localBusinessSchema } from "@/lib/schema";
 import JsonLd from "@/components/common/JsonLd";
+
+const sans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -39,8 +47,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={sans.variable}>
+      <body className={sans.className}>
         <a className="skip-link" href="#main">
           Skip to content
         </a>

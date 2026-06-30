@@ -1,3 +1,118 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"DM_Sans","arguments":[{"subsets":["latin"],"weight":["400","500","600","700","800","900"],"display":"swap","variable":"--font-sans"}],"variableName":"sans"} ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/_next/static/media/7ab938503e4547a1-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/_next/static/media/13971731025ec697-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/_next/static/media/7ab938503e4547a1-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/_next/static/media/13971731025ec697-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/_next/static/media/7ab938503e4547a1-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/_next/static/media/13971731025ec697-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/_next/static/media/7ab938503e4547a1-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/_next/static/media/13971731025ec697-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/_next/static/media/7ab938503e4547a1-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/_next/static/media/13971731025ec697-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/_next/static/media/7ab938503e4547a1-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/_next/static/media/13971731025ec697-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: 'DM Sans Fallback';src: local("Arial");ascent-override: 94.90%;descent-override: 29.66%;line-gap-override: 0.00%;size-adjust: 104.53%
+}.__className_bf57bf {font-family: 'DM Sans', 'DM Sans Fallback';font-style: normal
+}.__variable_bf57bf {--font-sans: 'DM Sans', 'DM Sans Fallback'
+}
+
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/globals.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
@@ -6,366 +121,8 @@
    "Public Safety & Reliability"
    ============================================================ */
 
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 75%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 500;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 900;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 900;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 900;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 800;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 900;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-vietnamese.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 900;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin-ext.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Archivo';
-  font-style: normal;
-  font-weight: 900;
-  font-stretch: 125%;
-  font-display: swap;
-  src: url("/fonts/archivo-latin.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+/* DM Sans loaded via next/font in app/layout.tsx */
+
 
 
 /* ---------- Tokens ---------- */
@@ -403,10 +160,10 @@
   --text: var(--navy-900);
   --text-muted: var(--steel-500);
 
-  /* Type — Archivo super-family (expanded display weights) */
-  --font-display: "Archivo", system-ui, sans-serif;
-  --font-eyebrow: "Archivo", system-ui, sans-serif;
-  --font-body: "Archivo", system-ui, sans-serif;
+  /* Type — DM Sans */
+  --font-display: var(--font-sans), "DM Sans", sans-serif;
+  --font-eyebrow: var(--font-sans), "DM Sans", sans-serif;
+  --font-body: var(--font-sans), "DM Sans", sans-serif;
   --ink: var(--navy-900);
 
   /* Spacing (brief scale) */
@@ -446,7 +203,12 @@ body {
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, textarea, select { font-family: inherit; }
 ul { list-style: none; padding: 0; }
+
+em, i, cite, dfn, var {
+  font-style: normal;
+}
 
 /* ---------- Type ---------- */
 h1, h2, h3, h4 {
@@ -940,14 +702,14 @@ h1, h2, h3, h4 {
   position: absolute; inset: 0; z-index: 1;
   background:
     linear-gradient(90deg, rgba(8,13,22,.92) 0%, rgba(8,13,22,.72) 38%, rgba(8,13,22,.18) 70%, rgba(8,13,22,.40) 100%),
-    linear-gradient(0deg, rgba(8,13,22,.96) 2%, rgba(8,13,22,.10) 46%);
+    linear-gradient(180deg, rgba(8,13,22,.78) 0%, rgba(8,13,22,.42) 16%, rgba(8,13,22,.14) 40%, rgba(8,13,22,.96) 100%);
 }
 .hero-inner {
   position: relative;
   z-index: 2;
   width: 100%;
   padding-bottom: clamp(40px, 6vw, 80px);
-  padding-top: calc(var(--header-h) + 32px);
+  padding-top: calc(var(--header-h) + var(--topbar-h, 0px) + 32px);
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 12px;
@@ -1146,7 +908,7 @@ h1, h2, h3, h4 {
 }
 
 /* Minor services row */
-.svc-minor { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 18px; border: 1px solid var(--steel-200); border-radius: var(--r-lg); overflow: hidden; background: var(--surface); }
+.svc-minor { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 60px; border: 1px solid var(--steel-200); border-radius: var(--r-lg); overflow: hidden; background: var(--surface); }
 .sm-item { padding: 30px 28px; border-right: 1px solid var(--steel-200); transition: background .2s ease; display: block; }
 .sm-item:last-child { border-right: none; }
 .sm-item:hover { background: #fff; }
@@ -1188,7 +950,7 @@ h1, h2, h3, h4 {
 .value .v-num { font-family: var(--font-eyebrow); font-weight: 700; font-size: 15px; color: var(--orange-400); letter-spacing: .14em; }
 .value .v-lbl { font-family: var(--font-display); font-weight: 800; font-size: clamp(22px, 2vw, 28px); text-transform: uppercase; color: #fff; margin: 8px 0 6px; letter-spacing: -.01em; }
 .value p { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.45; }
-.memorial { margin-top: 30px; padding: 20px 24px; background: rgba(255,255,255,.04); border-left: 3px solid var(--orange-500); border-radius: 0 var(--r-md) var(--r-md) 0; font-style: italic; color: rgba(255,255,255,.78); font-size: 16px; }
+.memorial { margin-top: 30px; padding: 20px 24px; background: rgba(255,255,255,.04); border-left: 3px solid var(--orange-500); border-radius: 0 var(--r-md) var(--r-md) 0; font-style: normal; color: rgba(255,255,255,.78); font-size: 16px; }
 
 /* ---------- SERVICE AREAS ---------- */
 .areas { background: var(--bone); }
@@ -1451,7 +1213,7 @@ h1, h2, h3, h4 {
   color: #fff;
   overflow: hidden;
   isolation: isolate;
-  padding-top: var(--header-h);
+  padding-top: calc(var(--header-h) + var(--topbar-h, 0px));
 }
 
 .svc-page-hero .hero-bg {
@@ -1787,17 +1549,132 @@ textarea:focus-visible {
    ============================================================ */
 
 :root {
-  --topbar-h: 50px;
-  --header-h: 150px;
+  --topbar-h: 0px;
+  --topbar-h-sm: 0px;
+  --header-h: 158px;
+  --header-h-sm: 128px;
 }
 
-/* ---------- Header top bar: dual location contact buttons ---------- */
+/* ---------- Header frame — single row, container-aligned ---------- */
+.header-frame {
+  width: 100%;
+}
+
+/* Contact buttons in the right column (above nav) */
+.header-menu > .header-contact {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.header-menu > .header-contact .header-phone-link {
+  gap: 10px;
+  padding: 8px 14px 9px;
+  background: var(--orange-500);
+  border-radius: var(--r-md);
+  box-shadow: 0 2px 10px rgba(34, 153, 12, 0.22);
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.header-menu > .header-contact .header-phone-link:hover {
+  opacity: 1;
+  background: var(--orange-600);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(34, 153, 12, 0.28);
+}
+
+.header-menu > .header-contact .header-phone-link:hover .header-phone-num {
+  color: #fff;
+}
+
+.header-menu > .header-contact .header-phone-icon {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.header-menu > .header-contact .header-phone-label {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.header-menu > .header-contact .header-phone-num {
+  color: #fff;
+}
+
+.header-shell--float.scrolled .header-menu > .header-contact .header-phone-link {
+  padding: 6px 12px 7px;
+}
+
+.header-shell--float.scrolled .header-menu > .header-contact .header-phone-num {
+  font-size: 14px;
+}
+
+.header-shell--float.scrolled .header-menu > .header-contact .header-phone-icon {
+  width: 26px;
+  height: 26px;
+}
+
+/* ---------- Floating header shell — content aligned to page container ---------- */
 .header-shell--float {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+
+.header-shell--float .header-frame {
+  pointer-events: auto;
+}
+
+.header-shell--float::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: rgba(8, 13, 22, 0.97);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
+  transition: opacity 0.3s ease;
+}
+
+.header-shell--float.scrolled::before {
+  opacity: 1;
+}
+
+.header-shell--float .site-header.site-header--float {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  transition: none;
+}
+
+.header-shell--float.scrolled .site-header.site-header--float {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+.header-shell--float .site-header--float .brand img,
+.header-shell--float .site-header--float .nav a,
+.header-shell--float.scrolled .site-header--float .brand img,
+.header-shell--float.scrolled .site-header--float .nav a {
+  filter: none;
 }
 
 .site-header.site-header--float {
@@ -1805,131 +1682,183 @@ textarea:focus-visible {
   top: auto;
   left: auto;
   right: auto;
-  min-height: 150px;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  display: block;
 }
 
 .site-header.site-header--float.scrolled {
-  min-height: 100px;
+  min-height: 0;
 }
 
-.header-topbar {
-  background: rgba(6, 10, 18, 0.94);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.header-topbar-inner {
+.header-unified {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: var(--topbar-h);
-  padding-block: 6px;
+  gap: clamp(16px, 2vw, 32px);
+  width: 100%;
+  min-height: var(--header-h);
+  padding: 16px 0 14px;
+  transition: min-height 0.3s ease, padding 0.3s ease;
 }
 
-.header-topbar-note {
-  margin: 0;
-  font-family: var(--font-eyebrow);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.52);
-  white-space: nowrap;
+.header-shell--float.scrolled .header-unified {
+  min-height: var(--header-h-sm);
+  padding: 10px 0 10px;
 }
 
-.header-topbar-phones {
-  display: flex;
-  align-items: stretch;
-  gap: 12px;
+.header-unified .brand {
   flex-shrink: 0;
+  align-self: center;
 }
 
-.topbar-call {
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 18px;
-  min-height: 44px;
-  font-size: inherit;
-  text-transform: none;
-  letter-spacing: 0;
-  white-space: nowrap;
-}
-
-.topbar-call svg {
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-}
-
-.topbar-call-text {
+.header-menu {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-  line-height: 1.2;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 10px;
+  flex: 1 1 auto;
+  margin-left: auto;
+  min-width: 0;
+  align-self: center;
 }
 
-.topbar-call-label {
+.header-menu .nav {
+  flex: none;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 14px 11px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--orange-500);
+  border-radius: 10px;
+}
+
+.drawer-contact .header-contact {
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.drawer-contact .header-phone-link {
+  padding: 12px 16px;
+  background: var(--orange-500);
+  border-radius: var(--r-md);
+  box-shadow: 0 2px 10px rgba(34, 153, 12, 0.22);
+}
+
+.drawer-contact .header-phone-link:hover {
+  background: var(--orange-600);
+}
+
+.drawer-contact .header-phone-icon {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.drawer-contact .header-phone-label {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.drawer-contact .header-phone-num {
+  color: #fff;
+}
+
+.drawer-contact .header-phone-link:hover .header-phone-num {
+  color: #fff;
+}
+
+.header-phone-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.header-phone-link:hover {
+  opacity: 0.88;
+}
+
+.header-phone-link:hover .header-phone-num {
+  color: var(--orange-400);
+}
+
+.header-phone-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(34, 153, 12, 0.18);
+  border: 1px solid rgba(45, 181, 18, 0.35);
+  color: var(--orange-400);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.header-phone-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.header-phone-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.header-phone-label {
   font-family: var(--font-eyebrow);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.55);
 }
 
-.topbar-call-num {
+.header-phone-num {
   font-family: var(--font-display);
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.01em;
-  text-transform: none;
   color: #fff;
+  transition: color 0.15s ease;
+  white-space: nowrap;
 }
 
-.header-shell--float.scrolled .header-topbar {
-  background: rgba(8, 13, 22, 0.98);
-}
-
-.header-shell--float.scrolled .header-topbar-inner {
-  min-height: 46px;
-  padding-block: 5px;
-}
-
-.header-shell--float.scrolled .topbar-call {
-  min-height: 40px;
-  padding: 8px 16px;
-}
-
-.header-shell--float.scrolled .topbar-call-num {
-  font-size: 14px;
-}
-
-.hero-inner {
-  padding-top: calc(var(--header-h) + var(--topbar-h) + 32px);
-}
-
-@media (min-width: 768px) {
-  .svc-page-hero {
-    padding-top: calc(var(--header-h) + var(--topbar-h));
-  }
-}
-
-/* Logo — 100px tall, aspect ratio preserved (300×141 source, no stretch/distortion). */
+/* Logo — 120px tall, aspect ratio preserved (no stretch/distortion). */
 .site-header .brand img {
-  height: 100px;
-  width: 170px;
+  height: 120px;
+  width: 180px;
   object-fit: contain;
 }
-/* Keep the header's overall height balanced with the larger logo. */
-.site-header {
-  padding-top: 8px;
-  padding-bottom: 22px;
+
+.header-frame .site-header.site-header--float {
+  padding: 0;
 }
-.site-header.scrolled {
-  padding-top: 6px;
-  padding-bottom: 16px;
+
+.header-menu .nav a {
+  padding: 8px 11px;
+}
+
+.header-menu .nav a.active::after {
+  left: 11px;
+  right: 11px;
 }
 
 /* Primary nav — 16px, capitalized, readable medium weight, breathable. */
@@ -1975,18 +1904,30 @@ textarea:focus-visible {
 /* The expanded 16px labels need more room, so collapse to the mobile drawer
    before they would crowd the logo. */
 @media (max-width: 1200px) {
-  .nav {
+  :root {
+    --header-h: 100px;
+    --header-h-sm: 88px;
+  }
+
+  .header-unified {
+    align-items: center;
+  }
+
+  .header-unified .brand {
+    align-self: center;
+  }
+
+  .header-menu {
     display: none;
   }
-  .site-header .wrap {
-    justify-content: space-between;
-  }
+
   .nav-toggle {
     display: grid;
     place-items: center;
     width: 48px;
     height: 48px;
-    margin-left: 10px;
+    flex-shrink: 0;
+    margin-left: auto;
     color: #fff;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.08);
@@ -1994,6 +1935,28 @@ textarea:focus-visible {
   .nav-toggle svg {
     width: 26px;
     height: 26px;
+  }
+}
+
+.drawer-contact {
+  margin-bottom: 22px;
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .header-menu > .header-contact .header-phone-link {
+    padding: 7px 12px 8px;
+  }
+
+  .header-menu > .header-contact .header-phone-num {
+    font-size: 13px;
+  }
+
+  .drawer-contact .header-phone-link {
+    padding: 10px 14px;
+  }
+
+  .drawer-contact .header-phone-num {
+    font-size: 13px;
   }
 }
 
@@ -2007,67 +1970,24 @@ textarea:focus-visible {
   }
 }
 
-@media (max-width: 900px) and (min-width: 768px) {
-  .header-topbar-note {
-    display: none;
-  }
-
-  .header-topbar-inner {
-    justify-content: flex-end;
-  }
-
-  .topbar-call {
-    padding: 9px 14px;
-    gap: 9px;
-    min-height: 42px;
-  }
-
-  .topbar-call-label {
-    font-size: 9px;
-  }
-
-  .topbar-call-num {
-    font-size: 14px;
-  }
-}
-
-/* Hide the top bar on mobile — drawer and sticky call bar handle contact. */
-@media (max-width: 767px) {
-  :root {
-    --topbar-h: 0px;
-  }
-
-  .header-topbar {
-    display: none;
-  }
-
-  .nav-toggle {
-    margin-left: auto;
-  }
-}
-
 /* Mobile — compact, well-padded header with logo and menu toggle only. */
 @media (max-width: 640px) {
   :root {
     --header-h: 84px;
     --header-h-sm: 72px;
   }
-  .site-header {
-    padding-block: 14px;
-    min-height: var(--header-h);
-  }
-  .site-header.site-header--float {
-    min-height: var(--header-h);
-  }
-  .site-header .wrap {
+  .header-unified {
     gap: 12px;
+    padding: 14px 0 12px;
+    min-height: var(--header-h);
   }
-  .site-header.scrolled {
-    padding-block: 12px;
+  .header-shell--float.scrolled .header-unified {
     min-height: var(--header-h-sm);
+    padding: 12px 0 10px;
   }
-  .site-header.site-header--float.scrolled {
-    min-height: var(--header-h-sm);
+
+  .nav-toggle {
+    margin-left: auto;
   }
   .site-header .brand img,
   .site-header.scrolled .brand img {
