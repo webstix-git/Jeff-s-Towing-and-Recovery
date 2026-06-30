@@ -1,12 +1,5 @@
 {
-  "/icon0.svg/route": "app/icon0.svg/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/about-us/service-areas/page": "app/about-us/service-areas/page.js",
-  "/about-us/equipment-safety/page": "app/about-us/equipment-safety/page.js",
-  "/roadside-assistance/page": "app/roadside-assistance/page.js",
-  "/roadside-assistance/tire-changes/page": "app/roadside-assistance/tire-changes/page.js",
-  "/roadside-assistance/fuel-delivery/page": "app/roadside-assistance/fuel-delivery/page.js",
-  "/towing-services/24-7-roadside-assistance/page": "app/towing-services/24-7-roadside-assistance/page.js",
-  "/towing-services/flatbed-towing/page": "app/towing-services/flatbed-towing/page.js",
+  "/icon0.svg/route": "app/icon0.svg/route.js",
   "/towing-services/page": "app/towing-services/page.js"
 }

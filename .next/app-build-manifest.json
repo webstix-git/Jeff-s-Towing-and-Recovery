@@ -6,62 +6,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/about-us/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/about-us/page.js"
-    ],
-    "/faq/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/faq/page.js"
-    ],
-    "/contact-us/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/contact-us/page.css",
-      "static/chunks/app/contact-us/page.js"
-    ],
-    "/about-us/service-areas/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/about-us/service-areas/page.js"
-    ],
-    "/about-us/equipment-safety/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/about-us/equipment-safety/page.js"
-    ],
-    "/roadside-assistance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/roadside-assistance/page.js"
-    ],
-    "/roadside-assistance/tire-changes/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/roadside-assistance/tire-changes/page.js"
-    ],
-    "/roadside-assistance/fuel-delivery/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/roadside-assistance/fuel-delivery/page.js"
-    ],
-    "/towing-services/24-7-roadside-assistance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/towing-services/24-7-roadside-assistance/page.js"
-    ],
-    "/towing-services/flatbed-towing/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/towing-services/flatbed-towing/page.js"
-    ],
     "/towing-services/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
