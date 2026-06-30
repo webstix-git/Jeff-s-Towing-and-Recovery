@@ -12,7 +12,7 @@ import { towingServices, roadsideServices } from "@/lib/navigation";
 export const metadata: Metadata = pageMetadata({
   title: "Service Index — Every Service We Offer",
   description:
-    "A complete index of towing and roadside services from Jeff's Towing & Recovery, organized by category with a description of each, serving Berrien County, MI.",
+    "A complete index of towing and roadside services from Jeff's Towing & Recovery, organized by category with a description of each, serving Southwest Michigan, MI.",
   path: "/service-index",
   image: "/images/svc-towing-recovery.png",
 });

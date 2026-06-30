@@ -4,6 +4,7 @@ import SiteShell from "@/components/layout/SiteShell";
 import SubPageHero from "@/components/common/SubPageHero";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import CtaSection from "@/components/common/CtaSection";
+import ServiceAreaMap from "@/components/common/ServiceAreaMap";
 import JsonLd from "@/components/common/JsonLd";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -13,7 +14,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "About Jeff's Towing & Recovery — First-Responder Founded",
   description:
-    "Founded in 2003, Jeff's Towing & Recovery is a family-run, first-responder founded towing company that has served Berrien County for over two decades. Meet the team, the values, and the story behind the trucks.",
+    "Founded in 2003, Jeff's Towing & Recovery is a family-run, first-responder founded towing company that has served Southwest Michigan for over two decades. Meet the team, the values, and the story behind the trucks.",
   path: "/about-us",
   image: "/images/legacy.jpg",
 });
@@ -109,7 +110,7 @@ export default function Page() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
 
       <SubPageHero
-        eyebrow="Family-Run · Berrien County"
+        eyebrow="Family-Run · Southwest Michigan"
         title="About Us"
         subtitle="Founded by a first responder, run like a family, and built on showing up when it counts."
         image="/images/legacy.jpg"
@@ -131,7 +132,7 @@ export default function Page() {
             </div>
             <div className="intro-stat">
               <div className="is-num">{site.yearsInBusiness}</div>
-              <div className="is-lbl">Years on Berrien County roads</div>
+              <div className="is-lbl">Years on Southwest Michigan roads</div>
             </div>
           </div>
           <div className="intro-copy reveal d1">
@@ -146,19 +147,53 @@ export default function Page() {
             <p className="lead">
               More than two decades later, we&apos;re still family-run and still operating on
               the standard he set: answer every call, quote a fair price, and treat every
-              driver and their vehicle with respect. Serving Berrien County since{" "}
+              driver and their vehicle with respect. Serving Southwest Michigan since{" "}
               {site.foundedYear} has earned us a reputation built one honest job at a time —
               and the trust of drivers who keep our number saved for the next time they&apos;re
               stranded. Two locations in Bridgman and Benton Harbor keep us close when you
               need us.
             </p>
             <div className="intro-sign">
-              <img src="/images/emblem.png" alt={`${site.legalName} emblem`} />
+              <img src="/images/emblem.png" alt={`${site.legalName} emblem`} width="123" height="58" />
               <p>
                 <strong>{site.legalName}</strong>
                 Bridgman &amp; Benton Harbor, Michigan
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="legacy section" data-screen-label="In Memory of Jeff">
+        <div className="wrap legacy-grid">
+          <div className="legacy-media reveal">
+            <div className="frame">
+              <img
+                src="/images/jeff.png"
+                alt="Jeff, founder of Jeff's Towing & Recovery"
+                width={346}
+                height={400}
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="legacy-copy reveal d1">
+            <span className="eyebrow on-dark">In Memory of Jeff</span>
+            <h2 className="h-lg">He Was Always There for People</h2>
+            <p className="lead">
+              Before starting Jeff&apos;s Towing, Jeff served the community as a Bridgman
+              police officer and a member of the Lake Township Fire Department. Helping
+              people was simply part of who he was.
+            </p>
+            <p className="lead">
+              When he started this company, he built it on simple values: answer the phone,
+              be honest, and treat people with respect. Those values continue to guide how we
+              serve our customers every day.
+            </p>
+            <p className="memorial">
+              In loving memory and honor of Jeff — mentor, first responder, and the heart of this
+              company.
+            </p>
           </div>
         </div>
       </section>
@@ -246,7 +281,7 @@ export default function Page() {
           <div className="areas-grid">
             <div className="areas-copy reveal">
               <span className="eyebrow">Local Community Focus</span>
-              <h2 className="h-lg">Rooted in Berrien County</h2>
+              <h2 className="h-lg">Rooted in Southwest Michigan</h2>
               <p className="lead">
                 This isn&apos;t a franchise passing through. Jeff served this community first as a
                 Bridgman City Police officer and a Lake Township firefighter, and that sense of duty
@@ -265,21 +300,7 @@ export default function Page() {
                 <span>+ Surrounding</span>
               </div>
             </div>
-            <div className="areas-map reveal d1" aria-label="Service area map">
-              <div className="map-grid" />
-              <div className="road r1" />
-              <div className="road r2" />
-              <div className="road r3" />
-              <div className="map-pin map-a">
-                <span className="dot pulse" />
-                <span className="lbl">Bridgman</span>
-              </div>
-              <div className="map-pin map-b">
-                <span className="dot" />
-                <span className="lbl">Benton Harbor</span>
-              </div>
-              <span className="map-note">Berrien County, Michigan</span>
-            </div>
+            <ServiceAreaMap className="reveal d1" />
           </div>
         </div>
       </section>
@@ -293,7 +314,7 @@ export default function Page() {
               <p className="lead">
                 When you&apos;re stranded, you don&apos;t need a call center three states away — you
                 need a local crew that knows these roads and answers the phone. For over 20 years,
-                that&apos;s exactly what Berrien County drivers have gotten from us.
+                that&apos;s exactly what Southwest Michigan drivers have gotten from us.
               </p>
               <a className="btn btn--call" href={`tel:${site.primaryPhone.tel}`}>
                 <PhoneRingIcon />

@@ -6,12 +6,13 @@ import CtaSection from "@/components/common/CtaSection";
 import JsonLd from "@/components/common/JsonLd";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
+import ServiceAreaMap from "@/components/common/ServiceAreaMap";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Service Areas — Towing Across Berrien County, MI",
+  title: "Service Areas — Towing Across Southwest Michigan, MI",
   description:
-    "Jeff's Towing & Recovery serves Bridgman, Benton Harbor, St. Joseph, Stevensville, Lake Township, Sawyer, and surrounding Berrien County from two local dispatch locations.",
+    "Jeff's Towing & Recovery serves Bridgman, Benton Harbor, St. Joseph, Stevensville, Lake Township, Sawyer, and surrounding Southwest Michigan from two local dispatch locations.",
   path: "/about-us/service-areas",
   image: "/images/intro-snow.jpg",
 });
@@ -22,13 +23,26 @@ const crumbs = [
   { name: "Service Areas", path: "/about-us/service-areas" },
 ];
 
-const areas = [
-  { name: "Bridgman", note: "Home base on California Rd, with fast reach to the lakeshore and I-94." },
-  { name: "Benton Harbor", note: "Our M-139 location keeps the north end of the county well covered." },
-  { name: "St. Joseph", note: "Quick response downtown, along the bluff, and out toward the highway." },
-  { name: "Stevensville", note: "Right between our two bases — usually a short hop for a truck." },
-  { name: "Lake Township", note: "Familiar ground, and part of Jeff's first-responder roots." },
-  { name: "Sawyer", note: "Covered on the south end, including the Red Arrow Highway corridor." },
+const communities = [
+  "Bridgman",
+  "Benton Harbor",
+  "St. Joseph",
+  "Stevensville",
+  "Lake Township",
+  "Sawyer",
+  "New Buffalo",
+  "Lakeside",
+  "Harbert",
+  "Three Oaks",
+  "Buchanan",
+  "Niles",
+  "Baroda",
+  "Berrien Springs",
+  "Eau Claire",
+  "Coloma",
+  "Watervliet",
+  "Hartford",
+  "South Haven",
 ];
 
 const PinIcon = () => (
@@ -48,7 +62,7 @@ export default function Page() {
         title="Service Areas"
         subtitle="Two locations, fast response, and the local knowledge to find you quickly."
         image="/images/intro-snow.jpg"
-        imageAlt="Recovering a vehicle on a snowy Berrien County road"
+        imageAlt="Recovering a vehicle on a snowy Southwest Michigan road"
       />
 
       <div className="page-crumbs">
@@ -97,21 +111,7 @@ export default function Page() {
               <span>+ Surrounding</span>
             </div>
           </div>
-          <div className="areas-map reveal d1" aria-label="Service area map">
-            <div className="map-grid" />
-            <div className="road r1" />
-            <div className="road r2" />
-            <div className="road r3" />
-            <div className="map-pin map-a">
-              <span className="dot pulse" />
-              <span className="lbl">Bridgman</span>
-            </div>
-            <div className="map-pin map-b">
-              <span className="dot" />
-              <span className="lbl">Benton Harbor</span>
-            </div>
-            <span className="map-note">Berrien County, Michigan</span>
-          </div>
+          <ServiceAreaMap className="reveal d1" />
         </div>
       </section>
 
@@ -121,18 +121,17 @@ export default function Page() {
             <span className="eyebrow">Communities We Serve</span>
             <h2 className="h-lg">Towns we know by name</h2>
             <p className="lead">
-              We proudly serve communities throughout Berrien County and the surrounding areas,
+              We proudly serve communities throughout Southwest Michigan and the surrounding areas,
               providing dependable towing and roadside assistance wherever drivers need help.
             </p>
           </div>
-          <div className="areas-list reveal d1">
-            {areas.map((area) => (
-              <div className="area-tile" key={area.name}>
-                <h3>{area.name}</h3>
-                <p>{area.note}</p>
-              </div>
+          <ul className="communities-grid reveal d1" aria-label="Communities we serve">
+            {communities.map((name) => (
+              <li className="community-item" key={name}>
+                {name}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
@@ -143,7 +142,7 @@ export default function Page() {
             Just Call — We&apos;ll <em>Tell You Straight.</em>
           </>
         }
-        body="If you're anywhere near Berrien County, give us a ring and we'll let you know how fast we can reach you."
+        body="If you're anywhere near Southwest Michigan, give us a ring and we'll let you know how fast we can reach you."
       />
     </SiteShell>
   );

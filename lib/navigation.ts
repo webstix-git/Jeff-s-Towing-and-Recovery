@@ -66,7 +66,7 @@ export const aboutPages: NavChild[] = [
     label: "Service Areas",
     href: "/about-us/service-areas",
     blurb:
-      "Two locations covering Bridgman, Benton Harbor, St. Joseph, and surrounding Berrien County.",
+      "Two locations covering Bridgman, Benton Harbor, St. Joseph, and surrounding Southwest Michigan.",
   },
   {
     label: "Equipment & Safety",

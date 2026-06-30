@@ -26,7 +26,7 @@ import "./contact.css";
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact Jeff's Towing & Recovery — Call 24/7",
-  description: `Reach Jeff's Towing & Recovery 24/7 in Berrien County, MI. Bridgman ${site.locations[0].phone.display}, Benton Harbor ${site.locations[1].phone.display}, or email ${site.email}.`,
+  description: `Reach Jeff's Towing & Recovery 24/7 in Southwest Michigan, MI. Bridgman ${site.locations[0].phone.display}, Benton Harbor ${site.locations[1].phone.display}, or email ${site.email}.`,
   path: "/contact-us",
   image: "/images/cta-highway.jpg",
 });

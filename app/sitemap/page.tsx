@@ -67,7 +67,7 @@ export default function Page() {
         title="Sitemap"
         subtitle="Every page on the site, in one place."
         image="/images/hero.jpg"
-        imageAlt="Tow truck on a Berrien County road"
+        imageAlt="Tow truck on a Southwest Michigan road"
       />
 
       <div className="page-crumbs">

@@ -4,12 +4,15 @@ import { useEffect } from "react";
 
 export default function SiteInteractions() {
   useEffect(() => {
+    const headerShell = document.querySelector<HTMLElement>(".header-shell");
     const header = document.querySelector<HTMLElement>(".site-header");
     const toTop = document.querySelector<HTMLElement>(".to-top");
 
     function onScroll() {
       const y = window.scrollY || window.pageYOffset;
-      if (header) header.classList.toggle("scrolled", y > 40);
+      const scrolled = y > 40;
+      if (headerShell) headerShell.classList.toggle("scrolled", scrolled);
+      if (header) header.classList.toggle("scrolled", scrolled);
       if (toTop) toTop.classList.toggle("show", y > 500);
     }
 

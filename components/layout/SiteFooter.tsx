@@ -66,8 +66,8 @@ export default function SiteFooter() {
               className="footer-logo"
               src="/images/logo.png"
               alt={site.legalName}
-              width="116"
-              height="88"
+              width="191"
+              height="90"
             />
             <p className="footer-tagline">{site.tagline}</p>
             <FooterSocial />

@@ -49,7 +49,7 @@ export const site = {
   legalName: "Jeff's Towing & Recovery LLC",
   tagline: "24/7 Towing & Roadside Assistance",
   description:
-    "Family-run, first-responder founded towing & recovery serving Berrien County, Michigan. 24/7 emergency roadside assistance, flatbed towing, lockouts, jump starts, tire changes, and fuel delivery.",
+    "Family-run, first-responder founded towing & recovery serving Southwest Michigan, Michigan. 24/7 emergency roadside assistance, flatbed towing, lockouts, jump starts, tire changes, and fuel delivery.",
   foundedNote: "Founded by a former police officer and firefighter.",
   /** Year the company was established */
   foundedYear: 2003,
@@ -87,8 +87,8 @@ export const site = {
       state: "MI",
       zip: "49106",
       phone: bridgmanPhone,
-      geo: { lat: 41.946, lng: -86.557 },
-      mapsUrl: "https://maps.app.goo.gl/om8sg5usRz43dy2U7",
+      geo: { lat: 41.951716, lng: -86.552236 },
+      mapsUrl: "https://maps.app.goo.gl/t6ELbEBmH9s58La16",
     },
     {
       id: "benton-harbor",
@@ -103,7 +103,7 @@ export const site = {
     },
   ] as Location[],
 
-  county: "Berrien County",
+  county: "Southwest Michigan",
   region: "Southwest Michigan",
 
   /** Communities served — used for local SEO context, not keyword stuffing */

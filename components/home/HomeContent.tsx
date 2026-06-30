@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CtaSection from "@/components/common/CtaSection";
+import ServiceAreaMap from "@/components/common/ServiceAreaMap";
 import { googleReviews, reviewInitials } from "@/lib/reviews";
 import { site } from "@/lib/site";
 
@@ -10,14 +11,13 @@ export default function HomeContent() {
         <div className="hero-bg"><img src="/images/hero.jpg" alt="Jeff's Towing recovering a vehicle at dusk" /></div>
         <div className="hero-scrim"></div>
         <div className="wrap hero-inner">
-          <span className="hero-eyebrow"><span className="pulse-dot"></span>Available 24 / 7 · Berrien County</span>
+          <span className="hero-eyebrow"><span className="pulse-dot"></span>Available 24 / 7 · Southwest Michigan</span>
           <h1 className="h-xxl hero-title">Stranded? We<br />Answer <em>Every Call.</em></h1>
-          <p className="hero-sub">Founded by a former police officer and firefighter — over 20 years of fast, honest towing and roadside recovery, any hour, any weather.</p>
+          <p className="hero-sub">Over 20 years of fast, honest towing and roadside recovery, any hour, any weather.</p>
           <div className="hero-actions">
             <Link className="btn btn--ghost btn--lg" href="/towing-services">Explore Services</Link>
           </div>
         </div>
-        <span className="hero-scrollcue">Scroll</span>
       </section>
       
       
@@ -50,7 +50,7 @@ export default function HomeContent() {
             <div className="frame"><img src="/images/intro-snow.jpg" alt="Jeff's Towing recovering a car in a Michigan snowstorm" /></div>
             <div className="intro-stat">
               <div className="is-num">20+</div>
-              <div className="is-lbl">Years on Berrien County roads</div>
+              <div className="is-lbl">Years on Southwest Michigan roads</div>
             </div>
           </div>
           <div className="intro-copy reveal d1">
@@ -59,7 +59,7 @@ export default function HomeContent() {
             <p className="lead">When a snowstorm rolls off the lake or a breakdown leaves you on the shoulder, you don't need a call center three states away. You need neighbors who know these roads and answer the phone.</p>
             <p className="lead">For over two decades, Jeff's Towing & Recovery has been that crew — dispatching fast, charging fairly, and treating every driver with the respect they deserve.</p>
             <div className="intro-sign">
-              <img src="/images/emblem.png" alt="Jeff's Towing & Recovery emblem" />
+              <img src="/images/emblem.png" alt={`${site.legalName} emblem`} width="123" height="58" />
               <p><strong>Jeff's Towing & Recovery LLC</strong>Bridgman & Benton Harbor, Michigan</p>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function HomeContent() {
         <div className="wrap areas-grid">
           <div className="areas-copy reveal">
             <span className="eyebrow">Where We Go</span>
-            <h2 className="h-xl">Serving All Of Berrien County</h2>
+            <h2 className="h-xl">Serving All Of Southwest Michigan</h2>
             <p className="lead">Two locations keep us close when you need us most — covering Bridgman, St. Joseph, Benton Harbor and the surrounding communities, fast.</p>
             <div className="loc-cards">
               <div className="loc-card">
@@ -207,15 +207,7 @@ export default function HomeContent() {
               <span>Stevensville</span><span>Lake Township</span><span>Sawyer</span><span>+ Surrounding</span>
             </div>
           </div>
-          <div className="areas-map reveal d1" aria-label="Service area map">
-            <div className="map-grid"></div>
-            <div className="road r1"></div>
-            <div className="road r2"></div>
-            <div className="road r3"></div>
-            <div className="map-pin map-a"><span className="dot pulse"></span><span className="lbl">Bridgman</span></div>
-            <div className="map-pin map-b"><span className="dot"></span><span className="lbl">Benton Harbor</span></div>
-            <span className="map-note">Berrien County, Michigan</span>
-          </div>
+          <ServiceAreaMap className="reveal d1" />
         </div>
       </section>
       

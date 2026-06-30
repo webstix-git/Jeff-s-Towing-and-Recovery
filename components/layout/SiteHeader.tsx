@@ -35,80 +35,91 @@ export default function SiteHeader() {
     return Boolean(item.children?.some((c) => pathname === c.href));
   };
 
-  const primary = site.primaryPhone;
-
   return (
     <>
-      <header className="site-header site-header--float" data-screen-label="Header">
-        <div className="wrap">
-          <Link className="brand" href="/" aria-label={`${site.legalName} home`}>
-            <img src="/images/logo.png" alt={site.legalName} width="220" height="125" />
-          </Link>
+      <div className="header-shell header-shell--float">
+        <div className="header-topbar" aria-label="Location phone numbers">
+          <div className="wrap header-topbar-inner">
+            <p className="header-topbar-note">{site.hours.badge}</p>
+            <div className="header-topbar-phones">
+              {site.phones.map((phone) => (
+                <a
+                  key={phone.tel}
+                  className="topbar-call btn btn--call"
+                  href={`tel:${phone.tel}`}
+                  aria-label={`Call ${phone.label} at ${phone.display}`}
+                >
+                  <PhoneIcon />
+                  <span className="topbar-call-text">
+                    <span className="topbar-call-label">{phone.label}</span>
+                    <span className="topbar-call-num">{phone.display}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
 
-          <nav className="nav" aria-label="Primary">
-            {mainNav.map((item) =>
-              item.children ? (
-                <div className="nav-item" key={item.href}>
+        <header className="site-header site-header--float" data-screen-label="Header">
+          <div className="wrap">
+            <Link className="brand" href="/" aria-label={`${site.legalName} home`}>
+              <img src="/images/logo.png" alt={site.legalName} width="213" height="100" />
+            </Link>
+
+            <nav className="nav" aria-label="Primary">
+              {mainNav.map((item) =>
+                item.children ? (
+                  <div className="nav-item" key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={isActive(item) ? "active" : undefined}
+                      aria-haspopup="true"
+                    >
+                      {item.label}
+                      <ChevronIcon />
+                    </Link>
+                    <div className="dropdown">
+                      {item.overviewLabel ? (
+                        <Link href={item.href}>{item.overviewLabel}</Link>
+                      ) : null}
+                      {item.children.map((child) => (
+                        <Link key={child.href} href={child.href}>
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
                   <Link
+                    key={item.href}
                     href={item.href}
                     className={isActive(item) ? "active" : undefined}
-                    aria-haspopup="true"
                   >
                     {item.label}
-                    <ChevronIcon />
                   </Link>
-                  <div className="dropdown">
-                    {item.overviewLabel ? (
-                      <Link href={item.href}>{item.overviewLabel}</Link>
-                    ) : null}
-                    {item.children.map((child) => (
-                      <Link key={child.href} href={child.href}>
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={isActive(item) ? "active" : undefined}
-                >
-                  {item.label}
-                </Link>
-              ),
-            )}
-          </nav>
+                ),
+              )}
+            </nav>
 
-          <div className="header-cta">
-            <a
-              className="btn btn--call"
-              href={`tel:${primary.tel}`}
-              aria-label={`Call ${primary.display} for emergency service`}
-            >
-              <PhoneIcon />
-              {primary.display}
-            </a>
+            <button className="nav-toggle" aria-label="Open menu" aria-haspopup="true">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M4 7h16M4 12h16M4 17h16"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
           </div>
-
-          <button className="nav-toggle" aria-label="Open menu" aria-haspopup="true">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path
-                d="M4 7h16M4 12h16M4 17h16"
-                stroke="currentColor"
-                strokeWidth="2.4"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </header>
+        </header>
+      </div>
 
       <div className="drawer" role="dialog" aria-modal="true" aria-label="Menu">
         <div className="drawer-scrim" />
         <div className="drawer-panel">
           <div className="d-head">
-            <img src="/images/logo.png" alt={site.legalName} width="92" height="52" />
+            <img src="/images/logo.png" alt={site.legalName} width="102" height="48" />
             <button className="drawer-close" aria-label="Close menu">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path

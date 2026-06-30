@@ -3,7 +3,7 @@ import type { ServiceContent } from "@/components/services/ServicePage";
 /**
  * Content for every service detail page. Written to read like a local towing
  * shop talking to its customers — specific, plain-spoken, and grounded in the
- * Berrien County roads we actually drive. Each page is unique; no boilerplate.
+ * Southwest Michigan roads we actually drive. Each page is unique; no boilerplate.
  */
 
 const TOWING = "/towing-services";
@@ -15,9 +15,9 @@ export const serviceContent: Record<string, ServiceContent> = {
     categoryLabel: "Towing Services",
     categoryPath: TOWING,
     name: "24/7 Roadside Assistance",
-    seoTitle: "24/7 Roadside Assistance & Towing in Berrien County, MI",
+    seoTitle: "24/7 Roadside Assistance & Towing in Southwest Michigan, MI",
     seoDescription:
-      "Round-the-clock roadside assistance and recovery in Bridgman, Benton Harbor, and across Berrien County. A real person answers and a truck rolls out — day, night, weekends, holidays.",
+      "Round-the-clock roadside assistance and recovery in Bridgman, Benton Harbor, and across Southwest Michigan. A real person answers and a truck rolls out — day, night, weekends, holidays.",
     heroEyebrow: "Core Service · Available 24/7",
     heroTitle: "24/7 Roadside Assistance & Recovery",
     heroSubtitle:
@@ -99,7 +99,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
       {
         q: "How quickly can someone reach me?",
-        a: "It depends on your location and how busy we are, but most Berrien County calls are reached in under 30 minutes. We'll give you a straight ETA when you call.",
+        a: "It depends on your location and how busy we are, but most Southwest Michigan calls are reached in under 30 minutes. We'll give you a straight ETA when you call.",
       },
       {
         q: "Do you charge more at night or on holidays?",
@@ -119,7 +119,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     name: "Flatbed Towing",
     seoTitle: "Flatbed Towing in Bridgman & Benton Harbor, MI",
     seoDescription:
-      "Damage-free flatbed towing for cars, trucks, SUVs, AWD and low-clearance vehicles across Berrien County. All four wheels off the ground, secured and level.",
+      "Damage-free flatbed towing for cars, trucks, SUVs, AWD and low-clearance vehicles across Southwest Michigan. All four wheels off the ground, secured and level.",
     heroEyebrow: "Damage-Free Transport",
     heroTitle: "Flatbed Towing Done Right",
     heroSubtitle:
@@ -191,7 +191,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       },
       {
         title: "Local knowledge",
-        text: "We know the driveways, the back roads, and the tight spots around Berrien County that make a difference on a haul.",
+        text: "We know the driveways, the back roads, and the tight spots around Southwest Michigan that make a difference on a haul.",
       },
     ],
     faqs: [
@@ -219,9 +219,9 @@ export const serviceContent: Record<string, ServiceContent> = {
     categoryLabel: "Roadside Assistance",
     categoryPath: ROADSIDE,
     name: "Tire Changes",
-    seoTitle: "Roadside Tire Change Service in Berrien County, MI",
+    seoTitle: "Roadside Tire Change Service in Southwest Michigan, MI",
     seoDescription:
-      "Flat tire on the shoulder? We'll swap on your spare safely and get you moving — roadside tire changes across Bridgman, Benton Harbor, and Berrien County, 24/7.",
+      "Flat tire on the shoulder? We'll swap on your spare safely and get you moving — roadside tire changes across Bridgman, Benton Harbor, and Southwest Michigan, 24/7.",
     heroEyebrow: "On-Site Help",
     heroTitle: "Roadside Tire Changes",
     heroSubtitle:
@@ -322,7 +322,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     name: "Jump Starts",
     seoTitle: "Jump Start Service in Bridgman & Benton Harbor, MI",
     seoDescription:
-      "Dead battery? We'll get you running and confirm a clean restart before we leave. 24/7 jump-start service across Berrien County, including cold-weather no-starts.",
+      "Dead battery? We'll get you running and confirm a clean restart before we leave. 24/7 jump-start service across Southwest Michigan, including cold-weather no-starts.",
     heroEyebrow: "Quick Fix",
     heroTitle: "Jump Start Service",
     heroSubtitle:
@@ -422,7 +422,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     categoryLabel: "Roadside Assistance",
     categoryPath: ROADSIDE,
     name: "Fuel Delivery",
-    seoTitle: "Emergency Fuel Delivery in Berrien County, MI",
+    seoTitle: "Emergency Fuel Delivery in Southwest Michigan, MI",
     seoDescription:
       "Ran out of gas between stations? We'll bring enough fuel to get you to the nearest pump. Fast emergency fuel delivery across Bridgman, Benton Harbor, and nearby.",
     heroEyebrow: "Out Of Gas",
@@ -526,7 +526,7 @@ export const serviceContent: Record<string, ServiceContent> = {
     name: "Lockout Services",
     seoTitle: "Car Lockout Service in Bridgman & Benton Harbor, MI",
     seoDescription:
-      "Locked your keys in the car? We get you back in without damage, fast. 24/7 vehicle lockout service across Berrien County — including kids or pets locked inside.",
+      "Locked your keys in the car? We get you back in without damage, fast. 24/7 vehicle lockout service across Southwest Michigan — including kids or pets locked inside.",
     heroEyebrow: "Lockouts",
     heroTitle: "Vehicle Lockout Service",
     heroSubtitle:
@@ -546,7 +546,7 @@ export const serviceContent: Record<string, ServiceContent> = {
       "Non-destructive entry — no broken windows or pried doors",
       "Experienced, respectful operators",
       "Priority response for kids or pets locked inside",
-      "Available 24/7 across Berrien County",
+      "Available 24/7 across Southwest Michigan",
     ],
     benefitsHeading: "Why call a professional",
     benefits: [

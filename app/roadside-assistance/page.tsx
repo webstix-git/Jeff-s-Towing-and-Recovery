@@ -13,9 +13,9 @@ import { serviceContent } from "@/lib/content/services";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Roadside Assistance in Berrien County, MI",
+  title: "Roadside Assistance in Southwest Michigan, MI",
   description:
-    "Tire changes, jump starts, fuel delivery, and lockout service across Bridgman, Benton Harbor, and Berrien County. Fast, local, 24/7 roadside help that comes to you.",
+    "Tire changes, jump starts, fuel delivery, and lockout service across Bridgman, Benton Harbor, and Southwest Michigan. Fast, local, 24/7 roadside help that comes to you.",
   path: "/roadside-assistance",
   image: "/images/svc-roadside-assistance.png",
 });
@@ -152,7 +152,7 @@ export default function Page() {
               <p className="lead">
                 Not every roadside problem needs a tow. A lot of the time it&apos;s a tire, a battery,
                 a locked door, or a dry tank standing between you and the rest of your day. These are
-                the calls we handle on the spot, anywhere across Berrien County.
+                the calls we handle on the spot, anywhere across Southwest Michigan.
               </p>
               <p className="lead">
                 Choose the service that fits what&apos;s happening below, or just call and describe
@@ -284,7 +284,7 @@ export default function Page() {
                 need a local crew that knows these roads and answers the phone.
               </p>
               <p className="lead">
-                For over 20 years, drivers across Berrien County have trusted us to show up fast,
+                For over 20 years, drivers across Southwest Michigan have trusted us to show up fast,
                 charge fairly, and treat them with respect.
               </p>
               <a className="btn btn--call" href={`tel:${site.primaryPhone.tel}`}>

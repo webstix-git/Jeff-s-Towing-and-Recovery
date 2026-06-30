@@ -5,9 +5,9 @@ import { pageMetadata } from "@/lib/seo";
 import { towingServices } from "@/lib/navigation";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Towing Services in Berrien County, MI",
+  title: "Towing Services in Southwest Michigan, MI",
   description:
-    "Light-duty towing and 24/7 recovery across Bridgman, Benton Harbor, and Berrien County. Flatbed transport and round-the-clock roadside assistance from a local, family-run crew.",
+    "Light-duty towing and 24/7 recovery across Bridgman, Benton Harbor, and Southwest Michigan. Flatbed transport and round-the-clock roadside assistance from a local, family-run crew.",
   path: "/towing-services",
   image: "/images/towing-services-hero.png",
 });
@@ -20,7 +20,7 @@ export default function Page() {
         name="Towing Services"
         eyebrow="Light-Duty Towing · Available 24/7"
         heroTitle="Towing & Recovery You Can Count On"
-        heroSubtitle="Flatbed transport and 24/7 roadside recovery for cars, trucks, and SUVs across Berrien County."
+        heroSubtitle="Flatbed transport and 24/7 roadside recovery for cars, trucks, and SUVs across Southwest Michigan."
         heroImage="/images/towing-services-hero.png"
         heroImageAlt="Jeff's Towing & Recovery flatbed tow truck ready for service"
         introHeading="Two ways we get you and your vehicle off the road"
@@ -49,7 +49,7 @@ export default function Page() {
             text: "You get a fair quote before the truck leaves the yard — never an emergency surcharge sprung at the scene.",
           },
           {
-            title: "Local Berrien County Coverage",
+            title: "Local Southwest Michigan Coverage",
             text: "Two bases in Bridgman and Benton Harbor keep response times short across the county.",
           },
           {
@@ -61,7 +61,7 @@ export default function Page() {
           heading: "Why Choose Jeff's Towing & Recovery",
           intro: [
             "When you're stranded on the shoulder, you don't need a call center three states away — you need a local crew that knows these roads and answers the phone.",
-            "For over 20 years, drivers across Berrien County have trusted us to show up fast, charge fairly, and treat them with respect.",
+            "For over 20 years, drivers across Southwest Michigan have trusted us to show up fast, charge fairly, and treat them with respect.",
           ],
           points: [
             {

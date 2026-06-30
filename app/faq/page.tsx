@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Frequently Asked Questions",
   description:
-    "Answers to common questions about towing and roadside assistance from Jeff's Towing & Recovery — pricing, response times, coverage areas, and what we tow in Berrien County, MI.",
+    "Answers to common questions about towing and roadside assistance from Jeff's Towing & Recovery — pricing, response times, coverage areas, and what we tow in Southwest Michigan, MI.",
   path: "/faq",
   image: "/images/hero.jpg",
 });
@@ -48,15 +48,15 @@ const faqs = [
   },
   {
     q: "Will you come and boost my dead car battery? Will you bring me a new battery?",
-    a: "We can absolutely boost your dead car battery for you, wherever you may be. Our auto technicians are licensed and capable of replacing your car battery too, but our replacement services depend on product availability. If a new battery is not immediately available, we can tow your car to the location of your choice.",
+    a: "We can provide a jump start for your dead car battery wherever you are. If the jump start is unsuccessful, we can tow your vehicle to the location of your choice.",
   },
   {
     q: "What areas do you cover?",
-    a: "From our Bridgman and Benton Harbor locations we serve St. Joseph, Stevensville, Lake Township, Sawyer, and the surrounding Berrien County communities.",
+    a: "From our Bridgman and Benton Harbor locations we serve St. Joseph, Stevensville, Lake Township, Sawyer, and the surrounding Southwest Michigan communities.",
   },
   {
     q: "Are you licensed and insured?",
-    a: "Yes. Jeff's Towing & Recovery LLC has been fully licensed and insured since 2003, with more than two decades of towing and recovery experience across Berrien County.",
+    a: "Yes. Jeff's Towing & Recovery LLC has been fully licensed and insured since 2003, with more than two decades of towing and recovery experience across Southwest Michigan.",
   },
   {
     q: "Which number should I call?",
@@ -84,7 +84,7 @@ export default function Page() {
         title="Frequently Asked Questions"
         subtitle="Straight answers about how we work, what we charge, and what to expect when you call."
         image="/images/hero.jpg"
-        imageAlt="Tow truck on a Berrien County road at dusk"
+        imageAlt="Tow truck on a Southwest Michigan road at dusk"
       />
 
       <div className="page-crumbs">

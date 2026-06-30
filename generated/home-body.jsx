@@ -73,7 +73,7 @@
   <div className="hero-bg"><img src="/images/hero.jpg" alt="Jeff's Towing recovering a vehicle at dusk" /></div>
   <div className="hero-scrim"></div>
   <div className="wrap hero-inner">
-    <span className="hero-eyebrow"><span className="pulse-dot"></span>Available 24 / 7 / 365 · Berrien County</span>
+    <span className="hero-eyebrow"><span className="pulse-dot"></span>Available 24 / 7 / 365 · Southwest Michigan</span>
     <h1 className="h-xxl" style={{ fontSize: "58px" }}>Stranded? We<br />Answer <em>Every Call.</em></h1>
     <p className="hero-sub">Founded by a former police officer and firefighter — over 20 years of fast, honest towing and roadside recovery, any hour, any weather.</p>
     <div className="hero-actions">
@@ -117,7 +117,7 @@
       <div className="frame"><img src="/images/intro-snow.jpg" alt="Jeff's Towing recovering a car in a Michigan snowstorm" /></div>
       <div className="intro-stat">
         <div className="is-num">20+</div>
-        <div className="is-lbl">Years on Berrien County roads</div>
+        <div className="is-lbl">Years on Southwest Michigan roads</div>
       </div>
     </div>
     <div className="intro-copy reveal d1">
@@ -260,7 +260,7 @@
   <div className="wrap areas-grid">
     <div className="areas-copy reveal">
       <span className="eyebrow">Where We Go</span>
-      <h2 className="h-xl">Serving All Of Berrien County</h2>
+      <h2 className="h-xl">Serving All Of Southwest Michigan</h2>
       <p className="lead">Two locations keep us close when you need us most — covering Bridgman, St. Joseph, Benton Harbor and the surrounding communities, fast.</p>
       <div className="loc-cards">
         <div className="loc-card">
@@ -284,7 +284,7 @@
       <div className="road r3"></div>
       <div className="map-pin map-a"><span className="dot pulse"></span><span className="lbl">Bridgman</span></div>
       <div className="map-pin map-b"><span className="dot"></span><span className="lbl">Benton Harbor</span></div>
-      <span className="map-note">Berrien County, Michigan</span>
+      <span className="map-note">Southwest Michigan, Michigan</span>
     </div>
   </div>
 </section>
@@ -366,7 +366,7 @@
     <div className="footer-grid">
       <div>
         <img className="footer-logo" src="/images/logo.png" alt="Jeff's Towing & Recovery" />
-        <p style={{ fontSize: "15px", maxWidth: "300px" }}>Family-run, first-responder founded towing & recovery serving Berrien County, Michigan with fairness and respect for over 20 years.</p>
+        <p style={{ fontSize: "15px", maxWidth: "300px" }}>Family-run, first-responder founded towing & recovery serving Southwest Michigan, Michigan with fairness and respect for over 20 years.</p>
         <div className="footer-social">
           <a href="#contact" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.4-3H13V9c0-.9.3-1.5 1.6-1.5H16V4.8C15.7 4.8 14.7 4.7 13.5 4.7 11 4.7 9.3 6.2 9.3 9v2H6.6v3H9.3v8H13z"></path></svg></a>
           <a href="tel:+12694656142" aria-label="Call"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24c1.1.37 2.3.57 3.5.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.57 3.5a1 1 0 01-.25 1l-2.2 2.3z"></path></svg></a>
@@ -403,7 +403,7 @@
     </div>
     <div className="footer-bottom">
       <span>© 2026 Jeff's Towing & Recovery LLC</span>
-      <span>Licensed & Insured · Berrien County, MI</span>
+      <span>Licensed & Insured · Southwest Michigan, MI</span>
     </div>
   </div>
 </footer>
