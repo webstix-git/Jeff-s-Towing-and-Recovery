@@ -50,7 +50,7 @@ export default function Page() {
           },
           {
             title: "Local Southwest Michigan Coverage",
-            text: "Two bases in Bridgman and Benton Harbor keep response times short across the county.",
+            text: "Two bases in Bridgman and Benton Harbor keep response times short and reliable.",
           },
           {
             title: "First-Responder Standards",

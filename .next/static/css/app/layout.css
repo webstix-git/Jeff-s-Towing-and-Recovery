@@ -2496,13 +2496,14 @@ textarea:focus-visible {
 }
 
 @media (max-width: 1080px) {
-  /* brand | nav on row 1; combined info spans full row 2 */
+  /* logo first, then services, then combined info */
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "brand nav"
-      "info  info";
-    column-gap: clamp(28px, 4vw, 40px);
+      "brand"
+      "nav"
+      "info";
+    column-gap: 0;
     row-gap: clamp(32px, 4vw, 44px);
   }
 
@@ -2519,7 +2520,7 @@ textarea:focus-visible {
   }
 
   .footer-col--brand {
-    padding-bottom: 8px;
+    padding-bottom: 0;
   }
 
   .footer-nav {
@@ -2573,7 +2574,7 @@ textarea:focus-visible {
     padding-top: 0;
     border-top: none;
     gap: 14px;
-    padding-bottom: 8px;
+    padding-bottom: 30px;
   }
 
   .footer-col--brand .footer-social {
