@@ -1672,6 +1672,9 @@ textarea:focus-visible {
   font-size: 17px;
   line-height: var(--text-lh);
 }
+.thank-you .prose p {
+  font-size: 18px;
+}
 .prose p + p {
   margin-top: 16px;
 }

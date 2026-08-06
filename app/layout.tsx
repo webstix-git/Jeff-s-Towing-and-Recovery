@@ -15,7 +15,9 @@ const sans = DM_Sans({
   variable: "--font-sans",
 });
 
-const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+const googleVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ||
+  "BXbzOEmZ3RIZs4JolqmUl22R3gSQeuYMQLnnfrzQyos";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -43,9 +45,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
-  ...(googleVerification
-    ? { verification: { google: googleVerification } }
-    : {}),
+  verification: { google: googleVerification },
 };
 
 export default function RootLayout({

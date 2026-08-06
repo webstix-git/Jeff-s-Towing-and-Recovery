@@ -38,7 +38,7 @@ export default function Page() {
         </div>
       </div>
 
-      <section className="prose-page section" data-screen-label="Thank You">
+      <section className="prose-page thank-you section" data-screen-label="Thank You">
         <div className="wrap">
           <div className="prose">
             <p>Thanks for contacting us! We will get in touch with you shortly.</p>
