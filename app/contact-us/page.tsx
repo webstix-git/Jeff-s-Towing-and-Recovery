@@ -89,7 +89,13 @@ const contactPageSchema = {
   },
 };
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error } = await searchParams;
+
   return (
     <SiteShell>
       <div className="contact-page">
@@ -241,10 +247,10 @@ export default function Page() {
                 <span className="eyebrow">Send A Request</span>
                 <h2 className="h-lg">Tell us what you need</h2>
                 <p className="lead">
-                  Non-emergency requests only. This form opens your email app with the details filled in.
+                  Non-emergency requests only. Send us the details and we&apos;ll get back to you shortly.
                 </p>
               </header>
-              <ContactForm />
+              <ContactForm error={error} />
             </div>
           </div>
         </section>

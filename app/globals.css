@@ -769,7 +769,7 @@ h1, h2, h3, h4 {
 }
 .svc-tile .idx { font-family: var(--font-eyebrow); font-weight: 700; letter-spacing: .14em; font-size: 13px; color: var(--orange-400); text-shadow: 0 1px 8px rgba(8, 13, 22, 0.85); }
 .svc-tile h3 { font-size: clamp(24px, 2.4vw, 34px); margin: 10px 0 8px; color: #fff; text-shadow: 0 2px 16px rgba(8, 13, 22, 0.9); }
-.svc-tile p { font-size: 15.5px; color: rgba(255,255,255,.92); max-width: 42ch; line-height: 1.5; text-shadow: 0 1px 10px rgba(8, 13, 22, 0.85); }
+.svc-tile p { font-size: 16px; color: rgba(255,255,255,.92); max-width: 42ch; line-height: 1.5; text-shadow: 0 1px 10px rgba(8, 13, 22, 0.85); }
 .svc-tile .go {
   margin-top: 16px; display: inline-flex; align-items: center; gap: 9px;
   font-family: var(--font-eyebrow); font-weight: 700; text-transform: uppercase; letter-spacing: .1em;

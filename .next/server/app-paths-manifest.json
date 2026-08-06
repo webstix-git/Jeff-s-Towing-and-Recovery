@@ -1,8 +1,8 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/manifest.json/route": "app/manifest.json/route.js",
-  "/icon0.svg/route": "app/icon0.svg/route.js",
-  "/page": "app/page.js",
-  "/roadside-assistance/lockout-services/page": "app/roadside-assistance/lockout-services/page.js",
-  "/towing-services/page": "app/towing-services/page.js"
+  "/api/contact/route": "app/api/contact/route.js",
+  "/towing-services/flatbed-towing/page": "app/towing-services/flatbed-towing/page.js",
+  "/towing-services/page": "app/towing-services/page.js",
+  "/sitemap/page": "app/sitemap/page.js",
+  "/contact-us/page": "app/contact-us/page.js",
+  "/thank-you/page": "app/thank-you/page.js"
 }

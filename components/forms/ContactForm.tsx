@@ -1,7 +1,20 @@
-"use client";
-
-import { useState } from "react";
+import Script from "next/script";
 import { site } from "@/lib/site";
+
+/** Public Cloudflare Turnstile site key — safe to expose in the browser. */
+const TURNSTILE_SITE_KEY =
+  process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "0x4AAAAAAEIGPvCMetY2od42";
+
+/** Leading country code, then digits with optional spaces, dots, dashes, or parens. */
+const PHONE_PATTERN = "\\+[1-9][0-9 \\(\\)\\.\\-]{5,17}[0-9]";
+const PHONE_TITLE =
+  "Enter your phone number in international format, including the country code — e.g. +1 269 465 6142";
+
+const RequiredMark = () => (
+  <span className="req" aria-hidden="true">
+    *
+  </span>
+);
 
 const services = [
   "Emergency Towing",
@@ -14,68 +27,60 @@ const services = [
   "Other / Not Sure",
 ];
 
-export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+const errorMessages: Record<string, string> = {
+  captcha: "We couldn't confirm you're human. Please complete the captcha and try again.",
+  submit: "Your request didn't go through. Please try again.",
+  server: "Something went wrong on our end. Please try again.",
+};
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const data = new FormData(form);
-    const name = String(data.get("name") ?? "");
-    const phone = String(data.get("phone") ?? "");
-    const email = String(data.get("email") ?? "");
-    const serviceType = String(data.get("service") ?? "");
-    const location = String(data.get("location") ?? "");
-    const message = String(data.get("message") ?? "");
-
-    const body = [
-      `Name: ${name}`,
-      `Phone: ${phone}`,
-      `Email: ${email}`,
-      `Service needed: ${serviceType}`,
-      `Location / vehicle: ${location}`,
-      "",
-      message,
-    ].join("\n");
-
-    const mailto = `mailto:${site.email}?subject=${encodeURIComponent(
-      `Service request from ${name || "website"}`,
-    )}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailto;
-    setSubmitted(true);
-  }
+export default function ContactForm({ error }: { error?: string }) {
+  const message = error ? errorMessages[error] ?? errorMessages.submit : null;
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
-      {submitted ? (
-        <p className="form-note" role="status">
-          Thanks — your email app should now be open with your request. For an
-          immediate response, call{" "}
+    <form id="request" className="contact-form" action="/api/contact" method="POST">
+      {message ? (
+        <p className="form-error" role="alert">
+          {message} You can also call{" "}
           <a href={`tel:${site.primaryPhone.tel}`}>{site.primaryPhone.display}</a>.
         </p>
-      ) : (
-        <p className="form-note">
-          For emergencies, calling is always fastest. This form opens your email app
-          with the details filled in.
-        </p>
-      )}
+      ) : null}
+
+      <p className="form-note">
+        For emergencies, calling is always fastest. Send this form and we&apos;ll get
+        back to you shortly. Fields marked <span className="req">*</span> are required.
+      </p>
 
       <div className="form-row">
         <div className="form-field">
-          <label htmlFor="cf-name">Full name</label>
+          <label htmlFor="cf-name">
+            Full name <RequiredMark />
+          </label>
           <input id="cf-name" name="name" type="text" autoComplete="name" required />
         </div>
         <div className="form-field">
-          <label htmlFor="cf-phone">Phone number</label>
-          <input id="cf-phone" name="phone" type="tel" autoComplete="tel" required />
+          <label htmlFor="cf-phone">
+            Phone number <RequiredMark />
+          </label>
+          <input
+            id="cf-phone"
+            name="phone"
+            type="tel"
+            inputMode="tel"
+            autoComplete="tel"
+            placeholder="+1 269 465 6142"
+            pattern={PHONE_PATTERN}
+            title={PHONE_TITLE}
+            required
+          />
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-field">
-          <label htmlFor="cf-email">Email address</label>
-          <input id="cf-email" name="email" type="email" autoComplete="email" />
+          <label htmlFor="cf-email">
+            Email address <RequiredMark />
+          </label>
+          <input id="cf-email" name="email" type="email" autoComplete="email" required />
         </div>
         <div className="form-field">
           <label htmlFor="cf-service">What do you need?</label>
@@ -107,9 +112,23 @@ export default function ContactForm() {
         <textarea id="cf-message" name="message" rows={4} />
       </div>
 
+      <div
+        className="cf-turnstile"
+        data-sitekey={TURNSTILE_SITE_KEY}
+        data-theme="light"
+        data-action="contact-form"
+      />
+
       <button className="btn btn--call btn--lg" type="submit">
         Send Request
       </button>
+
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        strategy="afterInteractive"
+        async
+        defer
+      />
     </form>
   );
 }

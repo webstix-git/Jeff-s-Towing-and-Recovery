@@ -1426,7 +1426,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .benefit-card p {
-  font-size: 15.5px;
+  font-size: 16px;
   color: var(--steel-600, var(--steel-500));
   line-height: 1.55;
 }
@@ -1478,7 +1478,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .process-steps p {
-  font-size: 15px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.55;
 }
@@ -1591,7 +1591,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .hub-card-body p {
-  font-size: 15.5px;
+  font-size: 16px;
   color: var(--steel-600, var(--steel-500));
   line-height: 1.55;
   flex: 1;
@@ -1801,6 +1801,24 @@ textarea:focus-visible {
   text-transform: uppercase;
   color: var(--navy-800);
 }
+.req {
+  color: #d92d20;
+  font-weight: 700;
+}
+.form-error {
+  background: #fef3f2;
+  border: 1px solid #fda29b;
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #912018;
+}
+.form-error a {
+  color: #912018;
+  font-weight: 700;
+  text-decoration: underline;
+}
 .form-field input,
 .form-field select,
 .form-field textarea {
@@ -1853,7 +1871,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .team-card p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--steel-600, var(--steel-500));
   line-height: 1.6;
 }
@@ -1895,7 +1913,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .feature-item p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--steel-500);
   line-height: 1.55;
 }

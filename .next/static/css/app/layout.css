@@ -1,6 +1,6 @@
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"DM_Sans","arguments":[{"subsets":["latin"],"weight":["400","500","600","700","800","900"],"display":"swap","variable":"--font-sans"}],"variableName":"sans"} ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.tsx","import":"DM_Sans","arguments":[{"subsets":["latin"],"weight":["400","500","600","700","800","900"],"display":"swap","variable":"--font-sans"}],"variableName":"sans"} ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /* latin-ext */
 @font-face {
   font-family: 'DM Sans';
@@ -891,7 +891,7 @@ h1, h2, h3, h4 {
 }
 .svc-tile .idx { font-family: var(--font-eyebrow); font-weight: 700; letter-spacing: .14em; font-size: 13px; color: var(--orange-400); text-shadow: 0 1px 8px rgba(8, 13, 22, 0.85); }
 .svc-tile h3 { font-size: clamp(24px, 2.4vw, 34px); margin: 10px 0 8px; color: #fff; text-shadow: 0 2px 16px rgba(8, 13, 22, 0.9); }
-.svc-tile p { font-size: 15.5px; color: rgba(255,255,255,.92); max-width: 42ch; line-height: 1.5; text-shadow: 0 1px 10px rgba(8, 13, 22, 0.85); }
+.svc-tile p { font-size: 16px; color: rgba(255,255,255,.92); max-width: 42ch; line-height: 1.5; text-shadow: 0 1px 10px rgba(8, 13, 22, 0.85); }
 .svc-tile .go {
   margin-top: 16px; display: inline-flex; align-items: center; gap: 9px;
   font-family: var(--font-eyebrow); font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
@@ -2937,7 +2937,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .benefit-card p {
-  font-size: 15.5px;
+  font-size: 16px;
   color: var(--steel-600, var(--steel-500));
   line-height: 1.55;
 }
@@ -2990,7 +2990,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .process-steps p {
-  font-size: 15px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.55;
 }
@@ -3106,7 +3106,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .hub-card-body p {
-  font-size: 15.5px;
+  font-size: 16px;
   color: var(--steel-600, var(--steel-500));
   line-height: 1.55;
   flex: 1 1;
@@ -3322,6 +3322,24 @@ textarea:focus-visible {
   text-transform: uppercase;
   color: var(--navy-800);
 }
+.req {
+  color: #d92d20;
+  font-weight: 700;
+}
+.form-error {
+  background: #fef3f2;
+  border: 1px solid #fda29b;
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #912018;
+}
+.form-error a {
+  color: #912018;
+  font-weight: 700;
+  text-decoration: underline;
+}
 .form-field input,
 .form-field select,
 .form-field textarea {
@@ -3375,7 +3393,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .team-card p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--steel-600, var(--steel-500));
   line-height: 1.6;
 }
@@ -3418,7 +3436,7 @@ textarea:focus-visible {
   letter-spacing: -0.01em;
 }
 .feature-item p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--steel-500);
   line-height: 1.55;
 }
