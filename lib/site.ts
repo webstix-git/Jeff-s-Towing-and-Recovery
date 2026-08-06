@@ -42,14 +42,15 @@ const bentonHarborPhone: PhoneNumber = {
 };
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://jeffstowing.com";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://www.jeffstowingandrecovery.com";
 
 export const site = {
   name: "Jeff's Towing & Recovery",
   legalName: "Jeff's Towing & Recovery LLC",
   tagline: "24/7 Towing & Roadside Assistance",
   description:
-    "Family-run, first-responder founded towing & recovery serving Southwest Michigan, Michigan. 24/7 emergency roadside assistance, flatbed towing, lockouts, jump starts, tire changes, and fuel delivery.",
+    "Family-run 24/7 towing in Southwest Michigan. Flatbed towing, roadside help, lockouts & tire changes from Bridgman & Benton Harbor.",
   foundedNote: "Founded by a former police officer and firefighter.",
   /** Year the company was established */
   foundedYear: 2003,

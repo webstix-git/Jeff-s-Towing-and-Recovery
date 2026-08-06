@@ -37,7 +37,7 @@ npm start
 Copy `.env.example` to `.env.local`:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
+NEXT_PUBLIC_SITE_URL=https://www.jeffstowingandrecovery.com
 ```
 
 Used for SEO metadata (canonical URLs, Open Graph, sitemap).

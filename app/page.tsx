@@ -3,8 +3,8 @@ import SiteShell from "@/components/layout/SiteShell";
 import HomeContent from "@/components/home/HomeContent";
 import { site } from "@/lib/site";
 
-const homeTitle = `${site.legalName} — ${site.tagline} | ${site.county}, MI`;
-const homeDescription = `${site.description} Bridgman & Benton Harbor dispatch. Call ${site.primaryPhone.display} any time.`;
+const homeTitle = `${site.name} | 24/7 Towing in Southwest Michigan`;
+const homeDescription = `${site.description} Call ${site.primaryPhone.display}.`;
 
 export const metadata: Metadata = {
   title: { absolute: homeTitle },

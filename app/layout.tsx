@@ -20,7 +20,7 @@ const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.tri
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${site.legalName} — ${site.tagline} | ${site.county}, MI`,
+    default: `${site.name} | 24/7 Towing in Southwest Michigan`,
     template: `%s | ${site.name}`,
   },
   description: `${site.description} Call ${site.primaryPhone.display}.`,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: site.legalName,
-    title: `${site.legalName} — ${site.tagline}`,
+    title: `${site.name} | 24/7 Towing in Southwest Michigan`,
     description: site.description,
     url: "/",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.legalName} — ${site.tagline}`,
+    title: `${site.name} | 24/7 Towing in Southwest Michigan`,
     description: site.description,
     images: ["/images/hero.jpg"],
   },
