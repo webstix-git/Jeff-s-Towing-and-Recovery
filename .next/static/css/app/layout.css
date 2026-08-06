@@ -653,7 +653,7 @@ h1, h2, h3, h4 {
 @media (max-width: 640px) {
   body { font-size: 17px; }
   .wrap { padding-inline: 20px; }
-  :root { --header-h: 72px; --header-h-sm: 62px; }
+  :root { --header-h: 98px; --header-h-sm: 90px; }
   .brand-tag { display: none; }
   .trust-strip .wrap { grid-template-columns: 1fr; }
   .trust-item { border-right: none; }
@@ -875,6 +875,25 @@ h1, h2, h3, h4 {
 
   .trust-bar .tb-item:nth-child(-n + 2) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (max-width: 640px) {
+  .trust-bar .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-bar .tb-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .trust-bar .tb-item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .trust-bar .tb-item:last-child {
+    border-bottom: none;
   }
 }
 
@@ -2106,10 +2125,12 @@ textarea:focus-visible {
 
   .header-unified {
     align-items: center;
+    justify-content: space-between;
   }
 
   .header-unified .brand {
     align-self: center;
+    margin-right: auto;
   }
 
   .header-menu {
@@ -2130,6 +2151,13 @@ textarea:focus-visible {
   .nav-toggle svg {
     width: 26px;
     height: 26px;
+  }
+
+  .site-header .brand img,
+  .site-header.scrolled .brand img {
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
   }
 }
 
@@ -2160,17 +2188,19 @@ textarea:focus-visible {
 @media (max-width: 1200px) and (min-width: 641px) {
   .site-header .brand img {
     height: 84px;
+    width: auto;
   }
   .site-header.scrolled .brand img {
     height: 68px;
+    width: auto;
   }
 }
 
 /* Mobile — compact, well-padded header with logo and menu toggle only. */
 @media (max-width: 640px) {
   :root {
-    --header-h: 84px;
-    --header-h-sm: 72px;
+    --header-h: 98px;
+    --header-h-sm: 90px;
   }
   .header-unified {
     gap: 12px;
@@ -2187,7 +2217,9 @@ textarea:focus-visible {
   }
   .site-header .brand img,
   .site-header.scrolled .brand img {
-    height: 44px;
+    height: 70px;
+    width: auto;
+    object-position: left center;
   }
   .nav-toggle {
     width: 44px;
@@ -2327,7 +2359,7 @@ textarea:focus-visible {
 
 /* Company tagline */
 .footer-tagline {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.50);
   line-height: var(--text-lh);
@@ -2897,7 +2929,7 @@ textarea:focus-visible {
 
   /* Tagline */
   .footer-tagline {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 

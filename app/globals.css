@@ -532,7 +532,7 @@ h1, h2, h3, h4 {
 @media (max-width: 640px) {
   body { font-size: 17px; }
   .wrap { padding-inline: 20px; }
-  :root { --header-h: 72px; --header-h-sm: 62px; }
+  :root { --header-h: 98px; --header-h-sm: 90px; }
   .brand-tag { display: none; }
   .trust-strip .wrap { grid-template-columns: 1fr; }
   .trust-item { border-right: none; }
@@ -753,6 +753,25 @@ h1, h2, h3, h4 {
 
   .trust-bar .tb-item:nth-child(-n + 2) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (max-width: 640px) {
+  .trust-bar .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-bar .tb-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .trust-bar .tb-item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .trust-bar .tb-item:last-child {
+    border-bottom: none;
   }
 }
 
