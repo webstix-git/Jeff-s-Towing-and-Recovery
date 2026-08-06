@@ -8,27 +8,41 @@ export type Faq = {
 
 type Props = {
   faqs: Faq[];
+  /** Optional section title shown above the list */
+  heading?: string;
+  eyebrow?: string;
   intro?: string;
 };
 
 /**
  * Static FAQ list — every question and answer is shown fully expanded on load,
- * with no click-to-reveal interaction. Used only on the dedicated /faq page.
+ * with no click-to-reveal interaction.
  */
-export default function FaqList({ faqs, intro }: Props) {
+export default function FaqList({
+  faqs,
+  heading,
+  eyebrow = "FAQ",
+  intro,
+}: Props) {
   return (
     <section className="faq-open section" data-screen-label="FAQ">
       <div className="wrap">
-        {intro ? <p className="faq-open-intro reveal">{intro}</p> : null}
+        {heading || intro ? (
+          <div className="section-head reveal">
+            {heading ? <span className="eyebrow">{eyebrow}</span> : null}
+            {heading ? <h2 className="h-lg">{heading}</h2> : null}
+            {intro ? <p className="lead">{intro}</p> : null}
+          </div>
+        ) : null}
         <div className="faq-open-list">
           {faqs.map((faq) => (
             <article className="faq-open-item reveal" key={faq.q}>
-              <h2 className="faq-open-q">
+              <h3 className="faq-open-q">
                 <span className="q-badge" aria-hidden="true">
                   Q
                 </span>
                 {faq.q}
-              </h2>
+              </h3>
               <p className="faq-open-a">{faq.aNode ?? faq.a}</p>
             </article>
           ))}

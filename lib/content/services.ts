@@ -32,10 +32,10 @@ export const serviceContent: Record<string, ServiceContent> = {
     overviewImage: "/images/svc-towing-recovery.png",
     overviewImageAlt: "Tow truck loading a damaged vehicle for safe transport",
     overviewBullets: [
-      "Live local dispatch — no call centers, no automated runaround",
-      "Cars, trucks, and SUVs (light-duty only)",
-      "Up-front pricing quoted before we roll",
-      "Coverage across Bridgman, Benton Harbor, St. Joseph and nearby",
+      "Live local dispatch — No call centers",
+      "Cars, trucks & SUVs — Light-duty only",
+      "Up-front pricing — Quoted before we roll",
+      "Local coverage — Bridgman, Benton Harbor, St. Joseph & nearby",
     ],
     benefitsHeading: "What you get when you call",
     benefits: [
@@ -134,10 +134,10 @@ export const serviceContent: Record<string, ServiceContent> = {
     overviewImage: "/images/svc-flatbed-towing.png",
     overviewImageAlt: "Close-up of a vehicle loaded and secured on a flatbed deck",
     overviewBullets: [
-      "All four wheels off the ground — no drivetrain wear",
-      "Proper soft-strap and wheel tie-downs, no chains on the body",
-      "AWD, lowered, classic, and luxury vehicles welcome",
-      "Local hauls and longer-distance transport available",
+      "All four wheels off the ground — No drivetrain wear",
+      "Soft-strap tie-downs — No chains on the body",
+      "Specialty vehicles welcome — AWD, lowered, classic & luxury",
+      "Flexible transport — Local hauls and longer runs",
     ],
     benefitsHeading: "Why flatbed is the safe choice",
     benefits: [
@@ -236,10 +236,10 @@ export const serviceContent: Record<string, ServiceContent> = {
     overviewImage: "/images/svc-tire-changes.png",
     overviewImageAlt: "Roadside technician changing a vehicle tire on-site",
     overviewBullets: [
-      "Safe positioning that keeps you out of live traffic",
-      "Spare mounted and lug nuts properly tightened",
-      "Day or night, every day of the year",
-      "Tow option if the spare isn't usable",
+      "Safe positioning — Keeps you out of live traffic",
+      "Spare mounted right — Lug nuts properly tightened",
+      "Any hour — Day or night, every day of the year",
+      "Tow backup — If the spare isn't usable",
     ],
     benefitsHeading: "Why call instead of doing it yourself",
     benefits: [
@@ -338,10 +338,10 @@ export const serviceContent: Record<string, ServiceContent> = {
     overviewImageAlt: "Technician connecting jumper cables to a car battery",
     overviewImagePosition: "center",
     overviewBullets: [
-      "Safe, correct connections that protect your electronics",
-      "We confirm a clean restart before leaving",
-      "Honest heads-up if the battery is failing",
-      "Available overnight, weekends, and holidays",
+      "Safe connections — Protects your electronics",
+      "Clean restart confirmed — Before we leave",
+      "Honest battery check — If it's failing, we say so",
+      "Always available — Overnight, weekends & holidays",
     ],
     benefitsHeading: "Why a proper jump matters",
     benefits: [
@@ -440,10 +440,10 @@ export const serviceContent: Record<string, ServiceContent> = {
     overviewImageAlt: "Green fuel pump nozzles at a gas station ready for refueling",
     overviewImagePosition: "center",
     overviewBullets: [
-      "Gasoline brought directly to your location",
-      "Enough to reach the nearest station and fill up",
-      "No long walk along a busy or dark roadside",
-      "Fast dispatch across our service area",
+      "Fuel delivered — Gasoline brought to your location",
+      "Enough to go — Reach the nearest station and fill up",
+      "Stay put — No long walk on a busy or dark roadside",
+      "Fast dispatch — Across our service area",
     ],
     benefitsHeading: "Why call for fuel",
     benefits: [
@@ -543,10 +543,10 @@ export const serviceContent: Record<string, ServiceContent> = {
       "Roadside technician helping a driver regain access to a locked vehicle without damage",
     overviewImagePosition: "center",
     overviewBullets: [
-      "Non-destructive entry — no broken windows or pried doors",
-      "Experienced, respectful operators",
-      "Priority response for kids or pets locked inside",
-      "Available 24/7 across Southwest Michigan",
+      "Non-destructive entry — No broken windows or pried doors",
+      "Experienced operators — Careful, respectful work",
+      "Priority response — Kids or pets locked inside",
+      "24/7 coverage — Across Southwest Michigan",
     ],
     benefitsHeading: "Why call a professional",
     benefits: [

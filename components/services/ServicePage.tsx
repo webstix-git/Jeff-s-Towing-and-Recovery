@@ -2,11 +2,17 @@ import Link from "next/link";
 import Breadcrumbs, { type Crumb } from "@/components/common/Breadcrumbs";
 import CtaSection from "@/components/common/CtaSection";
 import FaqLink from "@/components/common/FaqLink";
-import { type Faq } from "@/components/common/FaqList";
+import FaqList, { type Faq } from "@/components/common/FaqList";
 import JsonLd from "@/components/common/JsonLd";
 import PhoneIcon from "@/components/common/PhoneIcon";
 import { site } from "@/lib/site";
-import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
+import {
+  towingServices,
+  roadsideServices,
+  serviceCtaLabel,
+} from "@/lib/navigation";
+import { serviceContent } from "@/lib/content/services";
 
 export type ServiceContent = {
   /** Full route path, e.g. /towing-services/flatbed-towing */
@@ -38,12 +44,54 @@ export type ServiceContent = {
   faqs: Faq[];
 };
 
+const ArrowIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path
+      d="M5 12h14M13 6l6 6-6 6"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+function relatedServices(path: string, categoryPath: string) {
+  const pool =
+    categoryPath.startsWith("/roadside") ? roadsideServices : towingServices;
+  return pool.filter((s) => s.href !== path);
+}
+
+function cardImage(href: string) {
+  const match = Object.values(serviceContent).find((s) => s.path === href);
+  return {
+    image: match?.heroImage ?? "/images/hero.jpg",
+    alt: match?.heroImageAlt ?? site.legalName,
+  };
+}
+
+function categoryCardImage(categoryPath: string) {
+  if (categoryPath.startsWith("/roadside")) {
+    return {
+      image: "/images/svc-roadside-assistance.png",
+      alt: "Roadside assistance technician helping a stranded driver",
+    };
+  }
+  return {
+    image: "/images/towing-services-hero.png",
+    alt: "Jeff's Towing & Recovery flatbed tow truck ready for service",
+  };
+}
+
 export default function ServicePage({ content }: { content: ServiceContent }) {
   const crumbs: Crumb[] = [
     { name: "Home", path: "/" },
     { name: content.categoryLabel, path: content.categoryPath },
     { name: content.name, path: content.path },
   ];
+
+  const related = relatedServices(content.path, content.categoryPath);
+  const categoryImage = categoryCardImage(content.categoryPath);
 
   return (
     <>
@@ -55,6 +103,7 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
         })}
       />
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      {content.faqs.length > 0 ? <JsonLd data={faqSchema(content.faqs)} /> : null}
 
       <section className="svc-page-hero hero" data-screen-label="Service Hero">
         <div className="hero-bg">
@@ -113,11 +162,6 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
                   {p}
                 </p>
               ))}
-              <ul className="svc-bullets">
-                {content.overviewBullets.map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
@@ -198,6 +242,59 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
           </ul>
         </div>
       </section>
+
+      {content.faqs.length > 0 ? (
+        <FaqList
+          faqs={content.faqs}
+          heading="Frequently asked questions"
+          intro={`Common questions about ${content.name.toLowerCase()} from drivers across ${site.county}.`}
+        />
+      ) : null}
+
+      {related.length > 0 ? (
+        <section className="hub section" data-screen-label="Related Services">
+          <div className="wrap">
+            <div className="section-head reveal">
+              <span className="eyebrow">Explore</span>
+              <h2 className="h-lg">Related {content.categoryLabel.toLowerCase()}</h2>
+            </div>
+            <div className="hub-grid">
+              {related.map((service) => {
+                const { image, alt } = cardImage(service.href);
+                return (
+                  <Link className="hub-card reveal" href={service.href} key={service.href}>
+                    <div className="hub-card-media">
+                      <img src={image} alt={alt} loading="lazy" />
+                    </div>
+                    <div className="hub-card-body">
+                      <h3>{service.label}</h3>
+                      {service.blurb ? <p>{service.blurb}</p> : null}
+                      <span className="go">
+                        {serviceCtaLabel(service.label)} <ArrowIcon />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+              <Link className="hub-card reveal" href={content.categoryPath}>
+                <div className="hub-card-media">
+                  <img src={categoryImage.image} alt={categoryImage.alt} loading="lazy" />
+                </div>
+                <div className="hub-card-body">
+                  <h3>All {content.categoryLabel}</h3>
+                  <p>
+                    See every {content.categoryLabel.toLowerCase()} option we offer across{" "}
+                    {site.county}.
+                  </p>
+                  <span className="go">
+                    View {content.categoryLabel} <ArrowIcon />
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <FaqLink />
 

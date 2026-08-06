@@ -141,7 +141,6 @@ export default async function Page({
                           <PinIcon />
                         </span>
                         <div>
-                          <span className="cp-loc-label">Address</span>
                           <a
                             className="cp-loc-address"
                             href={loc.mapsUrl}
@@ -209,7 +208,11 @@ export default async function Page({
                   </span>
                   <div>
                     <h3>Hours</h3>
-                    <p>{site.hours.long}</p>
+                    <div className="cp-info-hours">
+                      {site.hours.office.map((line) => (
+                        <p key={line}>{line}</p>
+                      ))}
+                    </div>
                     <p className="cp-info-emergency">Emergency 24/7 towing available</p>
                   </div>
                 </div>
@@ -246,9 +249,6 @@ export default async function Page({
               <header className="cp-section-head">
                 <span className="eyebrow">Send A Request</span>
                 <h2 className="h-lg">Tell us what you need</h2>
-                <p className="lead">
-                  Non-emergency requests only. Send us the details and we&apos;ll get back to you shortly.
-                </p>
               </header>
               <ContactForm error={error} />
             </div>

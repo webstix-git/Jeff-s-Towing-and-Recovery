@@ -61,6 +61,19 @@ export const roadsideServices: NavChild[] = [
   },
 ];
 
+/** Meaningful CTA label for service hub cards (instead of generic "Learn More"). */
+export function serviceCtaLabel(label: string): string {
+  const map: Record<string, string> = {
+    "24/7 Roadside Assistance": "Get Roadside Help",
+    "Flatbed Towing": "View Flatbed Towing",
+    "Tire Changes": "Get Tire Change Help",
+    "Jump Starts": "Get a Jump Start",
+    "Fuel Delivery": "Request Fuel Delivery",
+    "Lockout Services": "Get Lockout Help",
+  };
+  return map[label] ?? `View ${label}`;
+}
+
 export const aboutPages: NavChild[] = [
   {
     label: "Service Areas",

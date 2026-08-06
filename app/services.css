@@ -90,28 +90,60 @@
 }
 
 .svc-bullets {
-  margin-top: 24px;
+  margin-top: 32px;
   display: grid;
-  gap: 12px;
-}
-
-.svc-bullets li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 16px;
-  color: var(--steel-700);
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 28px;
   list-style: none;
 }
 
-.svc-bullets li::before {
-  content: "";
-  width: 8px;
-  height: 8px;
+.svc-bullets li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  align-items: start;
+  list-style: none;
+}
+
+.svc-bullet-mark {
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: var(--orange-500);
-  margin-top: 9px;
+  background: color-mix(in srgb, var(--orange-500) 14%, transparent);
+  display: grid;
+  place-items: center;
   flex: none;
+  margin-top: 2px;
+}
+
+.svc-bullet-mark::before {
+  content: "";
+  width: 11px;
+  height: 7px;
+  border-left: 2.5px solid var(--orange-500);
+  border-bottom: 2.5px solid var(--orange-500);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.svc-bullet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.svc-bullet-body strong {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy-900);
+  line-height: var(--text-lh);
+  letter-spacing: -0.01em;
+}
+
+.svc-bullet-body span {
+  font-size: 15px;
+  color: var(--steel-600, var(--steel-500));
+  line-height: var(--text-lh);
 }
 
 .svc-faq {
@@ -169,7 +201,7 @@
   padding: 0 22px 20px;
   color: rgba(255, 255, 255, 0.72);
   font-size: 16px;
-  line-height: 1.55;
+  line-height: var(--text-lh);
 }
 
 .faq-item.open .faq-a {
@@ -180,12 +212,15 @@
 .faq-open {
   background: var(--surface);
 }
+.faq-open .section-head .lead {
+  color: var(--steel-700);
+}
 .faq-open-intro {
   max-width: 760px;
   margin: 0 0 44px;
   text-align: left;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: var(--text-lh);
   color: var(--steel-700);
 }
 .faq-open-list {
@@ -231,7 +266,7 @@
   margin-top: 14px;
   padding-left: 50px;
   font-size: 17px;
-  line-height: 1.65;
+  line-height: var(--text-lh);
   color: var(--steel-700);
 }
 .faq-open-a a {
@@ -273,7 +308,7 @@
 .faq-cta-card p {
   color: var(--steel-700);
   font-size: 16px;
-  line-height: 1.55;
+  line-height: var(--text-lh);
 }
 
 @media (max-width: 900px) {
@@ -292,5 +327,10 @@
   .svc-page-hero {
     min-height: 44vh;
     padding-top: var(--header-h-sm);
+  }
+
+  .svc-bullets {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 }

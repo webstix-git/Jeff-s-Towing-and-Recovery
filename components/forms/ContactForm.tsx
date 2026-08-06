@@ -5,10 +5,10 @@ import { site } from "@/lib/site";
 const TURNSTILE_SITE_KEY =
   process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "0x4AAAAAAEIGPvCMetY2od42";
 
-/** Leading country code, then digits with optional spaces, dots, dashes, or parens. */
-const PHONE_PATTERN = "\\+[1-9][0-9 \\(\\)\\.\\-]{5,17}[0-9]";
+/** US-style phone: optional leading +, digits with spaces, dots, dashes, or parens. */
+const PHONE_PATTERN = "[+]?[0-9 \\(\\)\\.\\-]{7,20}";
 const PHONE_TITLE =
-  "Enter your phone number in international format, including the country code — e.g. +1 269 465 6142";
+  "Enter your phone number — e.g. (269) 465-6142";
 
 const RequiredMark = () => (
   <span className="req" aria-hidden="true">
@@ -46,20 +46,19 @@ export default function ContactForm({ error }: { error?: string }) {
       ) : null}
 
       <p className="form-note">
-        For emergencies, calling is always fastest. Send this form and we&apos;ll get
-        back to you shortly. Fields marked <span className="req">*</span> are required.
+        Fields marked <span className="req">*</span> are required.
       </p>
 
       <div className="form-row">
         <div className="form-field">
           <label htmlFor="cf-name">
-            Full name <RequiredMark />
+            Full name: <RequiredMark />
           </label>
           <input id="cf-name" name="name" type="text" autoComplete="name" required />
         </div>
         <div className="form-field">
           <label htmlFor="cf-phone">
-            Phone number <RequiredMark />
+            Phone number: <RequiredMark />
           </label>
           <input
             id="cf-phone"
@@ -67,7 +66,7 @@ export default function ContactForm({ error }: { error?: string }) {
             type="tel"
             inputMode="tel"
             autoComplete="tel"
-            placeholder="+1 269 465 6142"
+            placeholder="(269) 465-6142"
             pattern={PHONE_PATTERN}
             title={PHONE_TITLE}
             required
@@ -78,12 +77,12 @@ export default function ContactForm({ error }: { error?: string }) {
       <div className="form-row">
         <div className="form-field">
           <label htmlFor="cf-email">
-            Email address <RequiredMark />
+            Email address: <RequiredMark />
           </label>
           <input id="cf-email" name="email" type="email" autoComplete="email" required />
         </div>
         <div className="form-field">
-          <label htmlFor="cf-service">What do you need?</label>
+          <label htmlFor="cf-service">What do you need:</label>
           <select id="cf-service" name="service" defaultValue="">
             <option value="" disabled>
               Select a service…
@@ -97,18 +96,29 @@ export default function ContactForm({ error }: { error?: string }) {
         </div>
       </div>
 
-      <div className="form-field">
-        <label htmlFor="cf-location">Your location &amp; vehicle</label>
-        <input
-          id="cf-location"
-          name="location"
-          type="text"
-          placeholder="e.g. Northbound I-94 near Exit 16, silver Honda CR-V"
-        />
+      <div className="form-row">
+        <div className="form-field">
+          <label htmlFor="cf-location">Your location:</label>
+          <input
+            id="cf-location"
+            name="location"
+            type="text"
+            placeholder="e.g. Northbound I-94 near Exit 16"
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="cf-vehicle">Vehicle model:</label>
+          <input
+            id="cf-vehicle"
+            name="vehicle"
+            type="text"
+            placeholder="e.g. Silver Honda CR-V"
+          />
+        </div>
       </div>
 
       <div className="form-field">
-        <label htmlFor="cf-message">Anything else we should know?</label>
+        <label htmlFor="cf-message">Anything else we should know:</label>
         <textarea id="cf-message" name="message" rows={4} />
       </div>
 

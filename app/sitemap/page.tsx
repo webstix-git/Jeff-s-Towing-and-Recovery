@@ -25,12 +25,6 @@ const crumbs = [
   { name: "Sitemap", path: "/sitemap" },
 ];
 
-const ArrowIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
 const groups: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Main",
@@ -65,9 +59,9 @@ export default function Page() {
       <SubPageHero
         eyebrow="Find Your Way"
         title="Sitemap"
-        subtitle="Every page on the site, in one place."
         image="/images/hero.jpg"
         imageAlt="Tow truck on a Southwest Michigan road"
+        showCall={false}
       />
 
       <div className="page-crumbs">
@@ -84,7 +78,6 @@ export default function Page() {
               <div className="index-simple">
                 {group.links.map((link) => (
                   <Link href={link.href} key={link.href}>
-                    <ArrowIcon />
                     {link.label}
                   </Link>
                 ))}

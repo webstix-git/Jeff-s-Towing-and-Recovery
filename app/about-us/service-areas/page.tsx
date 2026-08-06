@@ -115,7 +115,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="hub section" data-screen-label="Communities">
+      <section className="hub section section--surface" data-screen-label="Communities">
         <div className="wrap">
           <div className="section-head reveal">
             <span className="eyebrow">Communities We Serve</span>

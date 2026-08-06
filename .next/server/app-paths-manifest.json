@@ -1,8 +1,8 @@
 {
-  "/api/contact/route": "app/api/contact/route.js",
-  "/towing-services/flatbed-towing/page": "app/towing-services/flatbed-towing/page.js",
-  "/towing-services/page": "app/towing-services/page.js",
+  "/manifest.json/route": "app/manifest.json/route.js",
+  "/page": "app/page.js",
   "/sitemap/page": "app/sitemap/page.js",
-  "/contact-us/page": "app/contact-us/page.js",
-  "/thank-you/page": "app/thank-you/page.js"
+  "/service-index/page": "app/service-index/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/ai-policy/page": "app/ai-policy/page.js"
 }

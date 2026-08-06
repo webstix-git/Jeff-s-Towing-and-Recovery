@@ -265,7 +265,7 @@
       <div className="loc-cards">
         <div className="loc-card">
           <span className="pin"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" stroke="currentColor" strokeWidth="1.8"></path><circle cx="12" cy="10" r="2.4" stroke="currentColor" strokeWidth="1.8"></circle></svg></span>
-          <div><h4>Bridgman</h4><p>9211 California Rd<br />Bridgman, MI 49106</p></div>
+          <div><h4>Bridgman</h4><p>9211 California Rd.<br />Bridgman, MI 49106</p></div>
         </div>
         <div className="loc-card">
           <span className="pin"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" stroke="currentColor" strokeWidth="1.8"></path><circle cx="12" cy="10" r="2.4" stroke="currentColor" strokeWidth="1.8"></circle></svg></span>
@@ -396,7 +396,7 @@
       <div>
         <h4>Contact</h4>
         <a className="footer-phone" href="tel:+12694656142">(269) 465-6142</a>
-        <div className="footer-loc"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" stroke="currentColor" strokeWidth="1.8"></path><circle cx="12" cy="10" r="2.2" stroke="currentColor" strokeWidth="1.8"></circle></svg><span>9211 California Rd,<br />Bridgman, MI 49106</span></div>
+        <div className="footer-loc"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" stroke="currentColor" strokeWidth="1.8"></path><circle cx="12" cy="10" r="2.2" stroke="currentColor" strokeWidth="1.8"></circle></svg><span>9211 California Rd.<br />Bridgman, MI 49106</span></div>
         <div className="footer-loc"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" stroke="currentColor" strokeWidth="1.8"></path><circle cx="12" cy="10" r="2.2" stroke="currentColor" strokeWidth="1.8"></circle></svg><span>722 M-139,<br />Benton Harbor, MI 49022</span></div>
         <div className="footer-loc"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8"></circle><path d="M12 7v5l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"></path></svg><span>Open 24/7/365</span></div>
       </div>

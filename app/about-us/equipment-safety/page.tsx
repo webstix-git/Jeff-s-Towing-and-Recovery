@@ -22,14 +22,6 @@ const crumbs = [
   { name: "Equipment & Safety", path: "/about-us/equipment-safety" },
 ];
 
-const capabilities = [
-  "Flatbeds serviced and inspected on a regular schedule",
-  "Soft straps and wheel tie-downs that never touch your paint",
-  "Winch and recovery gear for ditches, driveways, and tight angles",
-  "Set up for AWD, lowered, low-clearance, and luxury vehicles",
-  "Licensed, insured, and trained operators on every truck",
-];
-
 export default function Page() {
   return (
     <SiteShell>
@@ -65,20 +57,21 @@ export default function Page() {
               <span className="eyebrow">Our Equipment</span>
               <h2 className="h-lg">The right gear, ready to roll</h2>
               <p className="lead">
-                The backbone of what we do is a clean, level flatbed — but a truck only earns its
-                keep when it&apos;s cared for. Ours are serviced and inspected on a regular schedule,
-                so the winch pulls, the deck tilts, and the straps hold the moment a call comes in.
+                A flatbed is only as good as the care behind it. We keep ours clean, level, and
+                checked on a regular schedule — so when you call, the winch, the deck, and the straps
+                are ready to do their job.
               </p>
               <p className="lead">
-                Beyond hauling, we carry the recovery tools for the awkward jobs: a car nosed into a
-                ditch, parked at a brutal angle, or sitting low enough that a careless load would do
-                more harm than the breakdown itself.
+                Not every tow is a straight pull onto the highway. Sometimes the car is in a ditch,
+                wedged at a bad angle, or sitting so low that the wrong approach would scratch more
+                than it helps. That&apos;s why we carry the recovery gear for the hard ones, not just
+                the easy loads.
               </p>
-              <ul className="svc-bullets">
-                {capabilities.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <p className="lead">
+                Soft straps and wheel tie-downs keep chains off your paint. We handle AWD, lowered,
+                low-clearance, and luxury vehicles with the same care — and a licensed, insured
+                operator is on every truck that rolls out.
+              </p>
             </div>
           </div>
         </div>

@@ -70,19 +70,19 @@ export const site = {
     /** Office hours, line by line, for the footer */
     office: [
       "Mon – Fri: 8:00 AM – 5:00 PM",
-      "Sat & Sun: By Appointment Only",
+      "Sat & Sun: By appointment",
     ],
     /** Emergency availability — footer displays as two lines */
     emergencyLines: ["Emergency Services Available", "24/7 Towing"],
-    /** One-line summary for the contact page */
-    long: "Mon – Fri 8:00 AM – 5:00 PM, Sat & Sun by appointment. Emergency 24/7 towing available.",
+    /** One-line summary for compact placements */
+    long: "Mon – Fri: 8:00 AM – 5:00 PM · Sat & Sun: By appointment · Emergency 24/7 towing available",
   },
 
   locations: [
     {
       id: "bridgman",
       name: "Bridgman",
-      street: "9211 California Rd",
+      street: "9211 California Rd.",
       city: "Bridgman",
       state: "MI",
       zip: "49106",

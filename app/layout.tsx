@@ -6,6 +6,7 @@ import "./pages.css";
 import { SITE_URL, site } from "@/lib/site";
 import { localBusinessSchema } from "@/lib/schema";
 import JsonLd from "@/components/common/JsonLd";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 const sans = DM_Sans({
   subsets: ["latin"],
@@ -13,6 +14,8 @@ const sans = DM_Sans({
   display: "swap",
   variable: "--font-sans",
 });
+
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -27,6 +30,7 @@ export const metadata: Metadata = {
     siteName: site.legalName,
     title: `${site.legalName} — ${site.tagline}`,
     description: site.description,
+    url: "/",
     images: [
       { url: "/images/hero.jpg", width: 1200, height: 630, alt: site.legalName },
     ],
@@ -39,6 +43,9 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
+  ...(googleVerification
+    ? { verification: { google: googleVerification } }
+    : {}),
 };
 
 export default function RootLayout({
@@ -49,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={sans.variable}>
       <body className={sans.className}>
+        <GoogleAnalytics />
         <a className="skip-link" href="#main">
           Skip to content
         </a>

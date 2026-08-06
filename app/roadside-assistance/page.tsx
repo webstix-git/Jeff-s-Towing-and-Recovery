@@ -8,7 +8,7 @@ import JsonLd from "@/components/common/JsonLd";
 import PhoneIcon from "@/components/common/PhoneIcon";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
-import { roadsideServices } from "@/lib/navigation";
+import { roadsideServices, serviceCtaLabel } from "@/lib/navigation";
 import { serviceContent } from "@/lib/content/services";
 import { site } from "@/lib/site";
 
@@ -263,7 +263,7 @@ export default function Page() {
                     <h3>{service.label}</h3>
                     <p>{service.blurb}</p>
                     <span className="go">
-                      Learn More <ArrowIcon />
+                      {serviceCtaLabel(service.label)} <ArrowIcon />
                     </span>
                   </div>
                 </Link>
@@ -273,7 +273,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="why section" data-screen-label="Why Choose Us">
+      <section className="why why--surface section" data-screen-label="Why Choose Us">
         <div className="wrap">
           <div className="why-grid">
             <div className="why-intro reveal">

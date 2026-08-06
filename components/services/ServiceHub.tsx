@@ -5,7 +5,7 @@ import FaqLink from "@/components/common/FaqLink";
 import JsonLd from "@/components/common/JsonLd";
 import PhoneIcon from "@/components/common/PhoneIcon";
 import { site } from "@/lib/site";
-import { type NavChild } from "@/lib/navigation";
+import { type NavChild, serviceCtaLabel } from "@/lib/navigation";
 import { serviceContent } from "@/lib/content/services";
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -242,7 +242,7 @@ export default function ServiceHub({
                     <h3>{service.label}</h3>
                     <p>{service.blurb}</p>
                     <span className="go">
-                      Learn More <ArrowIcon />
+                      {serviceCtaLabel(service.label)} <ArrowIcon />
                     </span>
                   </div>
                 </Link>

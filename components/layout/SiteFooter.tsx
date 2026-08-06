@@ -13,13 +13,6 @@ const PinIcon = () => (
   </svg>
 );
 
-const ClockIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
-    <path d="M12 7v5l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-  </svg>
-);
-
 const MailIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
@@ -135,16 +128,6 @@ export default function SiteFooter() {
                       {line}
                     </p>
                   ))}
-                  <div className="footer-hours-emergency">
-                    <span className="footer-contact-icon" aria-hidden="true">
-                      <ClockIcon />
-                    </span>
-                    <span className="footer-hours-emergency-text">
-                      {site.hours.emergencyLines.map((line) => (
-                        <span className="footer-emergency-line" key={line}>{line}</span>
-                      ))}
-                    </span>
-                  </div>
                 </div>
               </div>
 

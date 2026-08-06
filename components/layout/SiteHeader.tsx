@@ -138,10 +138,6 @@ export default function SiteHeader() {
             </button>
           </div>
 
-          <div className="drawer-contact">
-            <HeaderContactPanel />
-          </div>
-
           <nav aria-label="Mobile">
             {mainNav.map((item) => (
               <div key={item.href}>
@@ -158,6 +154,10 @@ export default function SiteHeader() {
               </div>
             ))}
           </nav>
+
+          <div className="drawer-contact">
+            <HeaderContactPanel />
+          </div>
         </div>
       </div>
     </>

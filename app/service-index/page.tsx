@@ -41,9 +41,9 @@ export default function Page() {
       <SubPageHero
         eyebrow="Everything We Do"
         title="Service Index"
-        subtitle="Every service we offer, grouped by category, with a quick description and a direct link."
         image="/images/svc-towing-recovery.png"
         imageAlt="Tow truck loading a vehicle for transport"
+        showCall={false}
       />
 
       <div className="page-crumbs">

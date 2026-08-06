@@ -42,44 +42,20 @@ const PhoneRingIcon = () => (
   </svg>
 );
 
-const TagIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M3 12l9-9 9 9-9 9-9-9z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-    <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-const ShieldIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5l8-3z" stroke="currentColor" strokeWidth="1.6" />
-    <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-const HeartIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M12 20s-7-4.3-9.2-8.4C1.3 8.5 2.8 5.5 6 5.5c2 0 3.2 1.2 4 2.4.8-1.2 2-2.4 4-2.4 3.2 0 4.7 3 3.2 6.1C19 15.7 12 20 12 20z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-  </svg>
-);
-
 const commitments = [
   {
-    icon: <PhoneRingIcon />,
     title: "We answer every call",
     text: "A real local person picks up, day or night, holidays included — no call centers and no automated runaround.",
   },
   {
-    icon: <TagIcon />,
     title: "Fair pricing, up front",
     text: "You hear an honest quote before a truck rolls, with no emergency surcharges sprung on you at the scene.",
   },
   {
-    icon: <ShieldIcon />,
     title: "Your vehicle, protected",
     text: "Licensed, insured operators and damage-free flatbeds mean your car arrives in the same shape it left.",
   },
   {
-    icon: <HeartIcon />,
     title: "Respect, every time",
     text: "Stranded is stressful enough. We treat you and your vehicle with genuine care from the first ring to drop-off.",
   },
@@ -166,13 +142,13 @@ export default function Page() {
 
       <section className="legacy section" data-screen-label="In Memory of Jeff">
         <div className="wrap legacy-grid">
-          <div className="legacy-media reveal">
+          <div className="legacy-media legacy-media--portrait reveal">
             <div className="frame">
               <img
-                src="/images/jeff.png"
+                src="/images/jeff.jpg"
                 alt="Jeff, founder of Jeff's Towing & Recovery"
-                width={346}
-                height={400}
+                width={1024}
+                height={1536}
                 loading="lazy"
               />
             </div>
@@ -198,7 +174,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section" data-screen-label="By The Numbers">
+      <section className="section section--surface" data-screen-label="By The Numbers">
         <div className="wrap">
           <div className="section-head section-head--center reveal">
             <span className="eyebrow">By The Numbers</span>
@@ -234,17 +210,14 @@ export default function Page() {
           </div>
           <div className="values reveal d1">
             <div className="value">
-              <span className="v-num">1</span>
               <div className="v-lbl">Fairness</div>
               <p>Honest pricing, quoted up front — no emergency surcharges.</p>
             </div>
             <div className="value">
-              <span className="v-num">2</span>
               <div className="v-lbl">Reliability</div>
               <p>We answer every call and show up when we say we will.</p>
             </div>
             <div className="value">
-              <span className="v-num">3</span>
               <div className="v-lbl">Respect</div>
               <p>You and your vehicle are treated with genuine care.</p>
             </div>
@@ -265,7 +238,6 @@ export default function Page() {
           <div className="feature-list reveal d1">
             {commitments.map((item) => (
               <div className="feature-item" key={item.title}>
-                <span className="fi-ico">{item.icon}</span>
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
@@ -276,7 +248,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section" data-screen-label="Community Focus">
+      <section className="section section--surface" data-screen-label="Community Focus">
         <div className="wrap">
           <div className="areas-grid">
             <div className="areas-copy reveal">
@@ -336,7 +308,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="hub section" data-screen-label="Learn More">
+      <section className="hub section section--surface" data-screen-label="Learn More">
         <div className="wrap">
           <div className="section-head reveal">
             <span className="eyebrow">Get To Know Us</span>
