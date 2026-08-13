@@ -1,8 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useLenis } from "lenis/react";
 
 export default function SiteInteractions() {
+  const lenis = useLenis();
+  const lenisRef = useRef(lenis);
+  lenisRef.current = lenis;
+
   useEffect(() => {
     const headerShell = document.querySelector<HTMLElement>(".header-shell");
     const header = document.querySelector<HTMLElement>(".site-header");
@@ -19,11 +24,13 @@ export default function SiteInteractions() {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-    if (toTop) {
-      toTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    }
+    const onTopClick = () => {
+      const instance = lenisRef.current;
+      if (instance) instance.scrollTo(0);
+      else window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    if (toTop) toTop.addEventListener("click", onTopClick);
 
     const drawer = document.querySelector<HTMLElement>(".drawer");
     const openBtn = document.querySelector<HTMLElement>(".nav-toggle");
@@ -34,6 +41,8 @@ export default function SiteInteractions() {
       if (!drawer) return;
       drawer.classList.toggle("open", open);
       document.body.style.overflow = open ? "hidden" : "";
+      if (open) lenisRef.current?.stop();
+      else lenisRef.current?.start();
     }
 
     const onOpen = () => setDrawer(true);
@@ -140,12 +149,14 @@ export default function SiteInteractions() {
 
     return () => {
       window.removeEventListener("scroll", onScroll);
+      toTop?.removeEventListener("click", onTopClick);
       openBtn?.removeEventListener("click", onOpen);
       closeBtn?.removeEventListener("click", onClose);
       scrim?.removeEventListener("click", onClose);
       document.removeEventListener("keydown", onKeydown);
       drawerLinks.forEach((a) => a.removeEventListener("click", onClose));
       document.body.style.overflow = "";
+      lenisRef.current?.start();
       io?.disconnect();
       if (timer) clearInterval(timer);
     };

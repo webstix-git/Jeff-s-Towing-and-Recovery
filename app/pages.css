@@ -1320,6 +1320,7 @@ textarea:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  padding: 0;
   font-family: var(--font-eyebrow);
   font-weight: 600;
   font-size: 12.5px;

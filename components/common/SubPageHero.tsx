@@ -2,7 +2,7 @@ import { site } from "@/lib/site";
 import PhoneIcon from "./PhoneIcon";
 
 type Props = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   subtitle?: string;
   image?: string;
@@ -28,10 +28,12 @@ export default function SubPageHero({
       </div>
       <div className="hero-scrim" />
       <div className="wrap hero-inner">
-        <span className="hero-eyebrow">
-          <span className="pulse-dot" />
-          {eyebrow}
-        </span>
+        {eyebrow ? (
+          <span className="hero-eyebrow">
+            <span className="pulse-dot" />
+            {eyebrow}
+          </span>
+        ) : null}
         <h1 className="h-xxl" style={{ fontSize: "clamp(38px, 5.2vw, 72px)" }}>
           {title}
         </h1>

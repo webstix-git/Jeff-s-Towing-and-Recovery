@@ -194,7 +194,7 @@
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   font-family: var(--font-body);
   color: var(--text);
@@ -611,7 +611,6 @@ h1, h2, h3, h4 {
 .reveal.d3 { transition-delay: .24s; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  html { scroll-behavior: auto; }
 }
 
 /* ============================================================
@@ -3051,6 +3050,7 @@ textarea:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  padding: 0;
   font-family: var(--font-eyebrow);
   font-weight: 600;
   font-size: 12.5px;
@@ -3407,6 +3407,9 @@ textarea:focus-visible {
   color: var(--steel-700);
   font-size: 17px;
   line-height: var(--text-lh);
+}
+.thank-you .prose p {
+  font-size: 18px;
 }
 .prose p + p {
   margin-top: 16px;

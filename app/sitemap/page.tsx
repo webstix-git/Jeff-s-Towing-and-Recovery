@@ -27,12 +27,8 @@ const crumbs = [
 
 const groups: { title: string; links: { label: string; href: string }[] }[] = [
   {
-    title: "Main",
-    links: [
-      { label: "Home", href: "/" },
-      { label: "FAQ", href: "/faq" },
-      { label: "Contact Us", href: "/contact-us" },
-    ],
+    title: "Pages",
+    links: [{ label: "Home", href: "/" }],
   },
   {
     title: "Towing Services",
@@ -49,6 +45,13 @@ const groups: { title: string; links: { label: string; href: string }[] }[] = [
     title: "About Us",
     links: [{ label: "About Us Overview", href: "/about-us" }, ...aboutPages],
   },
+  {
+    title: "Help",
+    links: [
+      { label: "FAQ", href: "/faq" },
+      { label: "Contact Us", href: "/contact-us" },
+    ],
+  },
 ];
 
 export default function Page() {
@@ -57,7 +60,6 @@ export default function Page() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
 
       <SubPageHero
-        eyebrow="Find Your Way"
         title="Sitemap"
         image="/images/hero.jpg"
         imageAlt="Tow truck on a Southwest Michigan road"
