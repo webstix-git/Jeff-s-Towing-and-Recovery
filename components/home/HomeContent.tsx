@@ -180,7 +180,7 @@ export default function HomeContent() {
         <div className="wrap areas-grid">
           <div className="areas-copy reveal">
             <span className="eyebrow">Where We Go</span>
-            <h2 className="h-xl">Serving All Of Southwest Michigan</h2>
+            <h2 className="h-lg">Serving All Of <em>Southwest Michigan</em></h2>
             <p className="lead">Two locations keep us close when you need us most — covering Bridgman, St. Joseph, Benton Harbor and the surrounding communities, fast.</p>
             <div className="loc-cards">
               <div className="loc-card">

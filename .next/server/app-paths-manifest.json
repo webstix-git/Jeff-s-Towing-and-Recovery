@@ -1,6 +1,6 @@
 {
-  "/page": "app/page.js",
-  "/sitemap/page": "app/sitemap/page.js",
-  "/towing-services/page": "app/towing-services/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/icon0.svg/route": "app/icon0.svg/route.js",
+  "/manifest.json/route": "app/manifest.json/route.js",
+  "/page": "app/page.js"
 }

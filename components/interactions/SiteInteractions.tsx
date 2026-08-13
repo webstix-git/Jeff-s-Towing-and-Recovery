@@ -15,7 +15,7 @@ export default function SiteInteractions() {
 
     function onScroll() {
       const y = window.scrollY || window.pageYOffset;
-      const scrolled = y > 40;
+      const scrolled = y > 24;
       if (headerShell) headerShell.classList.toggle("scrolled", scrolled);
       if (header) header.classList.toggle("scrolled", scrolled);
       if (toTop) toTop.classList.toggle("show", y > 500);
@@ -161,6 +161,17 @@ export default function SiteInteractions() {
       if (timer) clearInterval(timer);
     };
   }, []);
+
+  // Sync sticky header state with Lenis scroll so shrink stays smooth.
+  useLenis((instance) => {
+    const headerShell = document.querySelector<HTMLElement>(".header-shell");
+    const header = document.querySelector<HTMLElement>(".site-header");
+    const toTop = document.querySelector<HTMLElement>(".to-top");
+    const scrolled = instance.scroll > 24;
+    headerShell?.classList.toggle("scrolled", scrolled);
+    header?.classList.toggle("scrolled", scrolled);
+    toTop?.classList.toggle("show", instance.scroll > 500);
+  });
 
   return null;
 }
