@@ -55,6 +55,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={sans.variable}>
+      <head>
+        <script
+          defer
+          data-site="06b4f6788b204b8b"
+          data-endpoint="https://ywwxvriolxwuqcwjaluh.supabase.co/functions/v1/track-event"
+          src="https://midwestfamilyportal.com/track.js"
+        />
+      </head>
       <body className={sans.className}>
         <GoogleAnalytics />
         <a className="skip-link" href="#main">
